@@ -12,9 +12,9 @@ v20.1 {localdate}
 :experimental:
 :numbered!:
 :status:
-:base: http://jmbruel.github.io/InnopolisMAP
-:website: http://jmbruel.github.io/InnopolisMAP
-:baseURL: https://github.com/jmbruel/InnopolisMAP
+:base: http://jmbruel.github.io/nnopolisModernApplicationProduction
+:website: {base}
+:baseURL: https://github.com/jmbruel/InnopolisModernApplicationProduction
 :jmbtopic:
 // Specific to GitHub
 ifdef::env-github[]
