@@ -1,0 +1,36 @@
+//--------------------------------------------------------
+== pass:[<i class="fa fa-calendar"></i>] Schedule and organization
+//--------------------------------------------------------
+
+NOTE: Dates for F20 session, and subject to modifications
+
+// 3 session/week * 1,5h * 7 weeks = 20 sessions of 1h30
+// 40h admin => 30h student
+
+[cols="1,2,4"]
+|===
+| # | Date | Topic
+
+| 1 | Feb. 28th | link:{base}/inno-1-Intro.html[Introduction]
+| 2 | Feb. 28th | link:{base}/inno-2-Agile.html[Agile methods]
+| 3 | Feb. 28th | Project setup
+| 4 | Feb. 29th | link:{base}/inno-3-Manifesto.html[Agile Manifesto]
+| 5 | Feb. 29th | link:{base}/inno-4-Scrum.html[Scrum practice]
+| 6 | Feb. 29th | Scrum practice
+| 7 | Feb. 29th | Team building
+| 8 | Feb. 29th | Sprint 0
+
+| 9-16 | Mar. 13-14 | Feedbacks on self-practice; Demo and presentations
+| *16-25* | *Mar. 27-28* | *Continuous Integration; Build techniques; Reporting*
+| 16 | Mar. 10th | link:{base}/inno-feedbacks.html[Plan for the venue]
+| 16 | Mar. 10th | link:{base}/inno-11-Recap.html[Feedbacks from last venue/presentations]
+| 17 | Mar. 10th | link:{base}/inno-4-Scrum.html[Scrum practice]  (quick reminder)
+| 18 | Mar. 10th | link:{base}/inno-5-tests.html[Tests] & Coding Dojo
+| 19 | Mar. 10th | link:{base}/inno-6-git.html[Git] (quick reminder)
+| 20 | Mar. 11th | link:{base}/inno-7-ci.html[Continuous Integration]
+| 21 | Mar. 11th | link:{base}/inno-8-testingCI.html[Tests & CI]
+| 22-23 | Mar. 11th | Work on project reporting
+| 24-25 | Mar. 11th | Work on project reporting, discuss evaluation
+| 26-32 | ?? | Quality assessment; Reporting; Exam; Course evaluation
+|===
+

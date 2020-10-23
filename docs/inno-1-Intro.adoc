@@ -1,0 +1,75 @@
+//---------------------------------
+// Cours MPA - version UK
+// (c) JMB - 2016-2021
+//---------------------------------
+= **M**odern **A**pplication **P**roduction
+J.-M. Bruel <jbruel@gmail.com>
+v20.1 {localdate}
+:imagesdir: images
+//------------------------------------ variables de configuration
+// only used when master document
+:icons: font
+:experimental:
+:toc: left
+:numbered:
+:status:
+:base: https://github.com/jmbruel/InnopolisMAP
+:siteurl: {base}
+:bitlysiteurl: http://bit.ly/innopolis-map
+:incremental: %step
+
+include::../definitions.txt[]
+
+== Before we start...
+
+
+[{incremental}]
+- icon:laptop[] Laptops welcome!
+- Discussions welcome... but with me!
+
+== Sorry...
+
+[{incremental}]
+- For not being able to travel...
+- For not speaking a single word of Russian! [detail]#Or too few#
+- 2nd time only (in English) for this course!
+- 3rd year for me teaching at Innopolis!
+
+
+include::whoAmI.asc[]
+
+NOTE: I am here thanks to Pr. {bm}
+
+== Let's talk about you...
+
+// 2020 list: https://docs.google.com/spreadsheets/d/1XSAVB8a0ZljweZB5R3J9F3XvB3o6HyXfqA6mLbDwKRY/edit?usp=sharing
+
+
+https://docs.google.com/spreadsheets/d/1Xs-3Ys7CfMk1zAr93QHwISDU2VxV4s7wagCR7KLFEMc/edit?usp=sharing
+
+image::whoAreU.jpg[width=70%]
+
+== Looking for...
+
+- Is there any *French speaking* student?
+- Who is also registered in Design Pattern ?
+
+== Materials in live... icon:mobile[] icon:tablet[] icon:laptop[]
+
+{bitlysiteurl}
+
+== icon:home[] Principles
+
+[{incremental}]
+Application::
+  => Software
+Production::
+  => Professional activity => *build*
+Methods::
+  Agile Methods, wit focus on the {scrum} method
+Tools::
+  We will combine modern production tools
+
+include::time-schedule.adoc[]
+
+

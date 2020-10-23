@@ -1,0 +1,9 @@
+[submodule "materials/materials/task-list"]
+	path = docs/materials/task-list
+	url = https://github.com/codurance/task-list.git
+[submodule "deck.js"]
+	path = docs/deck.js
+	url = https://github.com/imakewebthings/deck.js
+[submodule "deck.js"]
+	path = deck.js
+	url = https://github.com/imakewebthings/deck.js
