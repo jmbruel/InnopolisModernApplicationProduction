@@ -106,7 +106,7 @@ image::mooc-results.png[width=70%]
 - pass:[<i class="fa fa-mobile"></i>] pass:[<i class="fa fa-tablet"></i>] pass:[<i class="fa fa-laptop"></i>] {bitlysiteurl}
 - pass:[<i class="fa fa-envelope"></i>] mailto:jbruel@gmail.com[jbruel@gmail.com]
 - pass:[<i class="fa fa-telegram"></i>] https://telegram.me/jmbruel[@jmbruel]
-- pass:[<i class="fa fa-users"></i>] Telegram group (for fun and quick exchange): [To Be Announced...]
+- pass:[<i class="fa fa-users"></i>] Telegram group (for fun and quick exchange): https://t.me/joinchat/AAAAAFIU8TWAlK-7oCaSEg
 - pass:[<i class="fa fa-slack"></i>] Slack group (for tasks and Q&A): [To Be Announced...]
 - pass:[<i class="fa fa-user"></i>] https://jmbruel.netlify.app
 - pass:[<i class="fa fa-calendar"></i>] https://doodle.com/mm/jeanmichelbruel/book-a-time[Book an appointment]
