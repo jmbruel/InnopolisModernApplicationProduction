@@ -1,0 +1,542 @@
+//---------------------------------
+// Cours MPA
+// (c) JMB - 2016
+//---------------------------------
+[[MPA]]
+= *Agile* principles
+J.-M. Bruel <jbruel@gmail.com>
+v20.1 {localdate}
+:imagesdir: images
+//------------------------------------ variables de configuration
+// only used when master document
+ifndef::jmbtopic[]
+:linkcss:
+:git-version: 2.9.2
+:icons: font
+:experimental:
+:toc-title: Table of content
+:toc: left
+:numbered:
+:status:
+:siteurl: http://jmbhome.github.io/teaching/topics/agile.html
+:bitlysiteurl: http://bit.ly/jmb-agile
+//------------------------------------ Slides uniquement
+ifdef::slides[]
+:nextslide: <<<
+:backend: deckjs
+:split:
+//--------------------- dzslides slides
+ifdef::dzslides[]
+:dzslides-style: tomorrow
+//:dzslides-style: stormy, watermelon, tomorrow, truffle, statement, default
+:dzslides-transition: fade
+:dzslides-fonts: family=Yanone+Kaffeesatz:400,700,200,300&family=Cedarville+Cursive
+//:dzslides-highlight: asciidoctor
+:dzslides-highlight: monokai
+:source-highlighter: highlightjs
+:dzslides-status:
+:topic: .topic
+:intro: .topic.intro
+:statement: .topic.statement
+:incremental: .incremental
+:source: .topic.source
+:nextslide: == {nbsp}
+endif::dzslides[]
+//----------- deck.js --------------
+ifdef::deckjs-slides[]
+:viewport: width=1024, user-scalable=no
+//:backend: deckjs # Should be used in the asciidoctor command (asciidoctor -b deckjs)
+// swiss, neon, beamer, web-2.0
+:deckjs_theme: swiss
+//fade, horizontal-slide, vertical-slide
+//:deckjs_transition: fade
+:goto:
+:menu:
+//:navigation:
+:status:
+:sectids!:
+:split:
+:nextslide: <<<<
+endif::deckjs-slides[]
+endif::slides[]
+//------------------------------------ HTML uniquement
+ifndef::slides[]
+:topic:
+:intro:
+:statement:
+:incremental: %step
+:source:
+endif::slides[]
+endif::jmbtopic[]
+
+// ------------------------------------------ definitions
+ifndef::definitions[]
+include::../definitions.txt[]
+endif::definitions[]
+
+//----------------------------- Avant-Propos ------------------
+ifdef::slides[]
+
+[{topic}]
+== Materials in live... icon:mobile[] icon:tablet[] icon:laptop[]
+
+{bitlysiteurl}
+
+{siteurl}
+
+endif::slides[]
+
+This part of the course is inspired by the {agileMoocUrl}[Agile MOOC]
+from {bm}.
+
+
+//----------------------------- Manifesto ------------------
+[{topic}]
+== The Agile Manifesto
+
+ifndef::slides[.Le manifeste Agile ({agileManifesto})]
+image::manifesto.png[link="{agileManifesto}",width=100%]
+ifdef::slides[NOTE: [detail]#{agileManifesto}#]
+
+NOTE: February 2001!
+
+//----------------------------- les 17 signataires ------------------
+[{topic}]
+== 17 authors
+
+Famous ones:
+
+- Ward Cunningham (Wiki)
+- Kent Beck (XP, JUnit)
+- Ken Schwaber et Jeff Sutherland ({Scrum})
+- Alistair Cockburn
+- Martin Fowler
+- ...
+
+//----------------------------- les 12 principes ------------------
+[{topic}]
+== The 12 principles
+
+image::12principles.jpg[link="{agileManifesto}",width=90%]
+
+You will find an update version of the principles on Wikipedia:
+
+https://en.wikipedia.org/wiki/Agile_software_development
+
+ifdef::slides[== The 12 principles (updated)]
+
+. Customer satisfaction by early and continuous delivery of valuable software
+. Welcome changing requirements, even in late development
+. Working software is delivered frequently (weeks rather than months)
+. Close, daily cooperation between business people and developers
+. Projects are built around motivated individuals, who should be trusted
+. Face-to-face conversation is the best form of communication (co-location)
+. Working software is the principal measure of progress
+. Sustainable development, able to maintain a constant pace
+. Continuous attention to technical excellence and good design
+. Simplicity - the art of maximizing the amount of work not done - is essential
+. Best architectures, requirements, and designs emerge from self-organizing teams
+. Regularly, the team reflects on how to become more effective, and adjusts accordingly
+
+
+ifdef::slides[]
+
+[{topic}]
+== icon:question-circle-o[] Exercise
+
+Find in those "12 principles":
+
+[{incremental}]
+- Which ones are not principles!
+- Which ones are in fact *pratices*
+- Which ones are in fact *assertions*
+- Which one is even wrong!
+- Useless repetitions
+- Where is test mentioned?
+
+== 12 principles
+
+image::12principles.jpg[link="{agileManifesto}",width=90%]
+
+[{topic}]
+== Elements of solution
+
+image::answerManifesto.png[link="{agileManifesto}",width=100%]
+ifdef::slides[NOTE: [detail]#{agileMoocUrl}#]
+
+endif::slides[]
+
+//----------------------------- les "values" ------------------
+[{topic}]
+== The agile values
+
+General ideas that precede the principles.
+
+ifdef::slides[== The agile values (ctd.)]
+
+From the {agileManifesto}[manifesto] itself:
+
+[{incremental}]
+- Individuals and interactions over processes and tools
+- Working software over comprehensive documentation
+- Customer collaboration over contract negotiation
+- Responding to change over following a plan
+
+ifdef::slides[== The agile values (ctd.)]
+
+[WARNING]
+=====
+Do not forget the quote that goes with:
+[quote,{agileManifesto}]
+while there is value in the items on the right, we value the items on the left more.
+=====
+
+ifdef::slides[== The agile values (ctd.)]
+
+From the {agileMoocUrl}[Agile MOOC]:
+
+[{incremental}]
+- New, reduced role for manager
+- No "Big Upfront" steps
+- Iterative development
+- Limited, negociated scope
+- Focus on quality, achieved through testing
+
+
+//----------------------------- les principes actuels ------------------
+[{topic}]
+== The principles
+
+Several types:
+
+- Organizational / Managerial
+- Technical
+
+ifdef::slides[:leveloffset: -1]
+
+[{topic}]
+=== Good NON AGILE principles!
+
+- Process, procedure and methods
+- Insist on requirements and their quality
+
+[{topic}]
+=== Organizational principles
+
+[{incremental}]
+- Put the customer at the centre
+- Accept change
+- Let the team self-organize
+- Maintain a sustainable pace
+
+[{topic}]
+=== More Organizational principles
+
+[{incremental}]
+- Produce "minimalist" software
+** Develop required features
+** and only those
+** develop only code and tests
+
+TIP: *YAGNI*: **Y**ou **A**in't **G**onna **N**eed **I**t
+
+[{topic}]
+=== More Organizational principles: the LEAN view
+
+7 waste of software dev. (M. Poppendieck):
+
+- Overproduction: extra/unused features
+- Inventory: partially developed work not released
+- Extra processing: unused artifacts
+- Motion: seeking information
+- Defects: escaped defects not caugth by tests
+- Waiting
+- Transportation: handoffs
+
+[{topic}]
+=== Technical principles
+
+[{incremental}]
+* Develop iteratively
+** Frequent working iterations
+** Closed-window rule
+* Treat tests as a key resource
+** All tests must pass (regression)
+** Test first (TDD)
+* Express requirements through scenarios
+** User stories
+
+
+ifdef::slides[:leveloffset: +1]
+
+//----------------------------- les "roles" ------------------
+[{topic}]
+== Roles
+
+* What happens to the manager?
+* Scrum Roles
+** Product Owner
+** SCRUM Master
+** Team
+* Other roles
+
+ifdef::slides[]
+
+[{topic}]
+== icon:question-circle-o[] Exercise
+
+What are the roles of traditionnal team managers?
+
+== Elements of answer
+
+Taken from the {agileMoocUrl}[Agile MOOC]:
+
+- Define goals
+- Define deadlines
+- Assign tasks
+- Provide interface with higher management
+- Provide interface with Customer
+- Validate requirements
+- Decide whether goals have been met
+- Enforce deadlines
+- Coach, mentor
+- Enforce rules and methodology
+
+endif::slides[]
+
+WARNING: In Scrum => no manager!
+
+ifndef::slides[:leveloffset: +1]
+
+== The (self-organizing) Team
+
+- Specialists but no specific domain
+- Cross-functional: anyone able to take any task
+- Select the major goals for the iteration
+- Assign tasks
+- Demonstrate results
+
+== Product Owner
+
+- Interface with the Customer
+- Defines the product features
+- Prioritizes features
+- Allows release presentation
+
+== Scrum master
+
+- makes sure that the team properly applies the methodology
+- ensures that the team is functional
+- enables cooperation
+- protect the team
+- helping remove impediments
+
+ifndef::slides[:leveloffset: 0]
+
+//----------------------------- les "practices" ------------------
+[{topic}]
+== Practices
+
+- Plannings & management
+- Meetings & Scrums
+- Development & releases
+- Retrospectives
+- Tests
+
+ifndef::slides[:leveloffset: +1]
+
+== Plannings & managements
+
+- Planning poker
+- Scrum of Scrums
+- Storyboards
+
+== Meetings
+
+* Daily meetings
+** Morning
+** "Stand-up" (<15')
+** Everybody participate
+** Commitments/Impediments
+* Planning meetings
+** Sprint Backlog
+* Retrospective meeetings
+** What went right?
+** What could be improved?
+* Review meetings
+** Customers involved
+
+== Focus on the Daily meeting
+
+The 3 classical questions:
+
+- What did you do yesterday?
+- What will you do today?
+- Are there any impediments in your way?
+
+== Development
+
+- Pair programming
+- Mentoring
+- Single code base (vs. branching)
+- Shared code
+- Leave optimization till last
+- Simple design
+- Incremental design
+- Refactoring
+
+== Release
+
+- Early and often
+- Continuous Integration
+- Small, Incremental
+- Weekly cycles
+
+== Tests
+
+- Coding standards
+- Systematic Unit Tests
+- TDD
+
+
+
+ifndef::slides[:leveloffset: 0]
+
+//----------------------------- les "artefacts" ------------------
+[{topic}]
+== Artifacts
+
+- Product Backlog
+- User stories
+- Sprint Backlog
+- Burdown
+
+ifdef::slides[:leveloffset: -1]
+
+[{topic}]
+=== Product Backlog
+
+- Property of the Product Owner
+- Maintained throughout the project
+- Open
+- Contains backlog items
+- Includes estimates of business value
+- Includes estimates of dev. effort
+
+
+[{topic}]
+=== User stories
+
+As a::
+  ...
+I want to::
+  ...
+So that::
+  ...
+
+ifdef::slides[=== User stories (cards)]
+
+:myref: https://mazoea.wordpress.com/agile/
+ifndef::slides[.Example of Story Card (source: {myref})]
+image:storycard.png[link="{myref}"]
+
+ifdef::slides[=== User stories vs. UML Use Cases]
+
+ifdef::slides[=== User stories (ctd.)]
+
+Good features (XP => https://en.wikipedia.org/wiki/INVEST_(mnemonic)[INVEST]):
+
+[{incremental}]
+- **I**ndependent (from other stories)
+- **N**egociable
+- **V**aluable (for the stakeholders)
+- **E**stimable
+- **S**mall
+- **T**estable
+
+ifdef::slides[=== User stories (ctd.)]
+
+Properties:
+
+- Id
+- Client priority
+- Cost estimation (points, time, ...)
+- Formulation "As a ..."
+
+ifdef::slides[=== User stories (ctd.)]
+
+:thisref: http://www.agiliste.fr/guide-de-demarrage-scrum/
+ifndef::slides[.Card example ({thisref})]
+image::US.jpg[width=100%,link="{thisref}"]
+
+ifdef::slides[=== Story mapping]
+
+Organizing Stories as matrix instead of simple list: *Story Mapping*.
+
+**M**ust, **S**hould, **C**ould, **W**ont
+=> *MoSCoW*
+
+:thisref: http://www.agilegarden.fr/un-lancement-de-projet-ludique-et-productif/
+ifndef::slides[.Exemple de Story Map ({thisref})]
+image::storymap.png[width=50%,link="{thisref}"]
+ifdef::slides[NOTE: [detail]#{thisref}#]
+
+ifdef::slides[=== Story mapping (ctd.)]
+
+Another way of presenting:
+by flow (dependencies between stories)
+
+:thisref: http://blog.cayenneapps.com/2014/11/25/5-steps-to-building-minimum-viable-product-with-story-mapping/
+ifndef::slides[.Example of Story Map by flow ({thisref})]
+image::mvp-priorities.png[width=80%,link="{thisref}"]
+ifdef::slides[NOTE: [detail]#{thisref}#]
+
+=== Storyboard
+
+:thisref: https://www.vikingcodeschool.com/software-engineering-basics/agile-development-with-xp-and-scrum
+ifndef::slides[.Example of storyboard  ({thisref})]
+image:agile_story_board.jpg[link="{thisref}"]
+
+=== Velocity
+
+WARNING: Not progess over time
+
+- Number of items delivered
+- Burndown chart
+
+// velocity estimation: https://www.versionone.com/agile-101/agile-management-practices/agile-scrum-velocity/
+
+
+[{topic}]
+=== Sprint Backlog
+
+Group of User Stories, taken from the Product Backlog
+and treated in a specific sprint.
+
+[{topic}]
+=== Burndown
+
+:thisref: http://www.agiliste.fr/instruments-pilotage-projet/
+ifndef::slides[.Exemple d'inputs pour mon Burn-down ({thisref})]
+image::burndown-inputs.png[width=50%,link="{thisref}"]
+ifdef::slides[NOTE: [detail]#{thisref}#]
+
+ifndef::slides[.Exemple de Burn-down résultant ({thisref})]
+image::burndown.png[width=50%,link="{thisref}"]
+ifdef::slides[NOTE: [detail]#{thisref}#]
+
+ifndef::slides[NOTE: To test yourself: [detail]#https://docs.google.com/spreadsheets/d/17bppZL6IQoHXKHm0Cr5Q5yYrQivA9oTSB5fmo6ECsJs/edit#gid=6#]
+
+ifdef::slides[:leveloffset: +1]
+
+//----------------------------- process ------------------
+[{topic}]
+== Classical process
+
+:thisref: http://scrumprimer.org
+ifndef::slides[.Agile process ({thisref})]
+image::scrum_overview.png[width=100%,link="{thisref}"]
+ifdef::slides[NOTE: [detail]#{thisref}#]
+
+//----------------------------- Quizz ------------------
+include::quizz.asc[]

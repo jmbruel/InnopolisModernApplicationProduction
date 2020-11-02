@@ -1,0 +1,498 @@
+//---------------------------------
+// Cours MPA
+// (c) JMB - 2016
+//---------------------------------
+[[MPA]]
+= Project Management, Agility, Tests
+J.-M. Bruel <jbruel@gmail.com>
+v20.1 {localdate}
+:imagesdir: images
+//------------------------------------ variables de configuration
+// only used when master document
+ifndef::jmbtopic[]
+:linkcss:
+:git-version: 2.9.2
+:icons: font
+:experimental:
+:toc-title: Table des matières
+:toc: left
+:numbered:
+:status:
+:siteurl: http://jmbhome.github.io/teaching/topics/agile.html
+:bitlysiteurl: http://bit.ly/jmb-agile
+//------------------------------------ Slides uniquement
+ifdef::slides[]
+//--------------------- dzslides slides
+ifdef::dzslides[]
+:dzslides-style: tomorrow
+//:dzslides-style: stormy, watermelon, tomorrow, truffle, statement, default
+:dzslides-transition: fade
+:dzslides-fonts: family=Yanone+Kaffeesatz:400,700,200,300&family=Cedarville+Cursive
+//:dzslides-highlight: asciidoctor
+:dzslides-highlight: monokai
+:source-highlighter: highlightjs
+:dzslides-status:
+:topic: .topic
+:intro: .topic.intro
+:statement: .topic.statement
+:incremental: .incremental
+:source: .topic.source
+endif::dzslides[]
+//----------- deck.js --------------
+ifdef::deckjs-slides[]
+:viewport: width=1024, user-scalable=no
+//:backend: deckjs # Should be used in the asciidoctor command (asciidoctor -b deckjs)
+// swiss, neon, beamer, web-2.0
+:deckjs_theme: swiss
+//fade, horizontal-slide, vertical-slide
+//:deckjs_transition: fade
+:goto:
+:menu:
+//:navigation:
+:status:
+:sectids!:
+endif::deckjs-slides[]
+endif::slides[]
+//------------------------------------ HTML uniquement
+ifndef::slides[]
+:topic:
+:intro:
+:statement:
+:incremental: %step
+:source:
+endif::slides[]
+endif::jmbtopic[]
+
+// ------------------------------------------ definitions
+ifndef::definitions[]
+include::../definitions.txt[]
+endif::definitions[]
+
+ifdef::slides[]
+
+[{topic}]
+== Materials in live... icon:mobile[] icon:tablet[] icon:laptop[]
+
+{bitlysiteurl}
+
+{siteurl}
+
+endif::slides[]
+
+This course is dedicated to my lost friend Jean-Michel Inglebert...
+
+ifndef::slides[.Students 2016 blazon: "Friday is troll day" ]
+image::blasonJMI.png[width=50%]
+
+// ------------------------------------------ disclaimer
+[{intro}]
+== icon:briefcase[] *Projects* management
+
+ifdef::slides[:leveloffset: -1]
+
+// ------
+[{topic}]
+=== What is a project ?
+
+[quote, 2014, Wikipedia]
+[...] a project is an individual or collaborative enterprise, possibly involving research or design, that is carefully planned, usually by the project assigned team, to achieve a particular aim
+
+// ------
+[{topic}]
+=== Some facts...
+
+- *Start*: was are the client needs expressed ?
+
+.. specifications,
+.. list of expected features,
+.. scenarios, use cases
+.. ...
+
+- *End*: when is the result product due ?
+
+Avoid to answer : *yesterday!* [detail]#(Otherwise it's not a project anymore, but a rescue plan)#
+
+// ------
+[{topic}]
+=== ... and in between ?
+
+[{incremental}]
+Option 1:: do your best by your own (like in 'DO the sales')
+Option 2:: run a process (like in '(RE)DO your passport')
+Option 3:: use project management techniques
+
+// ------
+[{topic}]
+=== How project management is doing so far ...
+
+[quote, January 2014, Programmez! journal]
+___________________________________________
+Out of 10, 7 projects are delivered *late or never* !
+___________________________________________
+
+ifdef::slides[=== How project management is doing so far ...]
+
+Possible reasons:
+
+[{incremental}]
+- client expectations are *vague*
+- *over-estimation* of available resources
+- latency at the *beginning*
+- modification and updates get *lost*
+- *overbooked* teams
+- *lost of knowledge* during the project
+- risks are *badly evaluated*
+- meetings are *not productive*
+
+ifdef::slides[=== How project management is doing so far ...]
+
+[quote, Often heard...]
+___________________________________________
+In any case, it's the development team fault.
+___________________________________________
+
+// ------
+[{topic}]
+=== Why is it so hard ?
+
+
+It should not be so hard:
+
+- The goal and target are well known (provided by the client)
+- The target satisfaction is often measurable (assessment)
+
+[CAUTION]
+.The problem
+====
+There is no systematic method that can garanty that a project
+team will meet its goals.
+====
+
+[NOTE]
+.Why ?
+====
+Because it requires to manage a domain complexity,
+a technical complexity and a human complexity,
+at the same time, with limited resources (time, money, ...)
+====
+
+ifdef::slides[=== Why is it so hard ?]
+
+In fact, the only predictable fact is :
+
+it will be required to *adapt*!
+
+// ------
+[{topic}]
+=== What is a successfull project ?
+
+[WARNING]
+====
+A software project will end successfully if the team delivers an
+ application that is *reliable*, *robust* and *maintenable* that
+ meet the client expectations and need.
+====
+
+ifdef::slides[=== What is a successfull project ?]
+
+[{incremental}]
+reliable:: behave as expected in the expected conditions
+robust:: handle traffic, user mistakes, failures, etc.
+maintenable:: require few efforts to evolve
+
+ifdef::slides[:leveloffset: 0]
+
+// ------
+[{intro}]
+== icon:wrench[] To *produce* applications
+
+ifdef::slides[== To *produce* applications]
+
+BUILD:: make, {ant}, {maven}, {ivy}, {gradle}, etc.
+=>:: we'll see that later (if needed)...
+Project Management tools::
+- {tuleap}, {redmine}: dedicated tools
+- {gitlab} versioning repos using {git}.
+
+// ------
+[{intro}]
+== icon:road[] Methods
+
+ifdef::slides[:leveloffset: -1]
+
+// ------
+[{topic}]
+=== Waterfall and V Cycle
+
+ifndef::slides[.The waterfall process]
+image::waterfall.png[width=70%]
+
+ifdef::slides[=== Waterfall and V Cycle]
+
+The V cycle adopts:
+
+- Cascading *descending* phases for analysis and design
+- Followed by an *ascending* for coding, tests and integration.
+
+ifndef::slides[.Typicall V cycle (source: https://en.wikipedia.org/wiki/V-Model)]
+image::Vcycle.png[scaledwidth="90%"]
+
+[WARNING]
+====
+In these kind of projects *success* means
+being able to go through the ascending branch of the 'V'
+successfully.
+====
+
+ifdef::slides[=== Waterfall and V Cycle]
+
+[NOTE]
+.If project stops...
+====
+- No application can be delivered
+- At best some modules/classes can be reused
+====
+
+[NOTE]
+.If project is late...
+====
+- coding and integration phases are shortened
+- delivered product is undertested
+====
+
+// ------
+ifdef::slides[=== Waterfall and V Cycle]
+
+To summarize:
+
+[{incremental}]
+- Cartesian way of reducing complexity
+- Test plans are produced in descending phases
+- Tests plans are veryfied during ascending phases
+
+
+ifdef::slides[=== Waterfall and V Cycle]
+
+[CAUTION]
+.Well known limitations
+====
+[{incremental}]
+- *absence* of *maintenance* and *evolution* phases
+- going back to design is very difficult
+- Hard to estimate _a priori_: what is the estimated complexity of the project ?
+- Does the delivered *application* conform to its *documentation* (*and vice versa*) ?
+====
+
+// ------
+[{intro}]
+=== From *V* cycles to *W* ones
+
+ifdef::slides[:leveloffset: -1]
+
+// ------
+[{topic}]
+====  Let's consider a trivial example
+
+.A web application for managing URLs
+====
+Develop a *web application* capable of *collecting*
+and *displaying* URLs.
+====
+
+ifdef::slides[:leveloffset: -3]
+
+// ------
+[{topic}]
+===== Cycle 0
+
+Setup of the integration infrastructure
+
+Chosen solution:
+
+- Development langage: `PHP`
+- Infrastructure : `LAMP` server
+
+// ------
+[{topic}]
+===== Cycle 1
+
+Display the collected URLs
+
+Chosen solution:
+
+- The server stores a urls table
+- Web page is returned using `GET` and displays urls as a list
+
+// ------
+[{topic}]
+===== Cycle 2
+
+To collect urls
+
+Chosen solution:
+
+- Web page propose a form to enter new urls
+
+ifdef::slides[:leveloffset: -2]
+
+// ------
+[{topic}]
+==== Overall process
+
+ifdef::slides[]
+
+==== Overall process
+image::w12.png[]
+
+==== Overall process
+image::w32.png[]
+
+==== Overall process
+image::w42.png[]
+
+==== Overall process
+image::w52.png[]
+
+==== Overall process
+image::w5b2.png[]
+
+==== Overall process
+image::w5rb2.png[]
+
+endif::slides[]
+
+ifndef::slides[]
+image::w5rb2.png[scaledwidth="90%"]
+endif::slides[]
+
+
+// ------
+[{topic}]
+==== Well known benefits
+
+[NOTE]
+====
+[{incremental}]
+- delivers an application that already runs in cycle 1
+- manage complexity and integration at each cycle
+- can be applied to a new development but also to an evolution
+- allows the client to adjust its requirements
+====
+
+ifdef::slides[]
+==== Quizz
+
+Complete the sentence we've seen before:
+
+A software project will end successfully if the team delivers an
+ application that is ......, ....... and ........... that
+ meet the client expectations and need.
+
+==== Quizz
+
+endif::slides[]
+
+Complete the sentence we've seen before:
+
+A software project will end successfully if the team delivers an
+ application that is *reliable*, *robust* and *maintenable* that
+ meet the client expectations and need.
+
+
+ifdef::slides[:leveloffset: -3]
+
+// ------
+[{topic}]
+===== When it does not work ?
+
+[WARNING]
+====
+[{incremental}]
+- client can't be involved regularly
+- the driving of the method is approximative (delays in releases)
+- tests are left over
+====
+
+// ------
+[{topic}]
+===== New problems
+
+[WARNING]
+====
+[{incremental}]
+- importance of the initial infrastructure (cycle 0)
+- how to automate non regression tests: XP, T/BDD ...
+- spaghetti code => refactoring ...
+- frequent releases: continuous integration ...
+- what about documentation ???
+====
+
+ifdef::slides[:leveloffset: -2]
+
+// ------
+[{topic}]
+=== V versus W
+
+[NOTE]
+.V
+====
+[{incremental}]
+- Requirements
+- Specifications
+- General and detailed design
+- Coding and (unit) testing
+- Integration and (integration) testing
+- Release
+====
+
+ifdef::slides[=== V versus W (suite)]
+
+[NOTE]
+.W
+====
+[{incremental}]
+* Cycle 0
+* Cycle 1 .. N
+[{incremental}]
+** chose several features
+** ... code/test ...
+** release
+** adjust expectations
+====
+
+// ------
+[{topic}]
+=== What is important
+
+[{incremental}]
+- Plan (more or less) next actions
+- Do as planned
+- Regularly evaluate progress towards the target
+
+
+// ------
+[{topic}]
+=== Evaluate progress towards the target
+
+An important artifact to assess progress: tests!
+
+[CAUTION]
+====
+Whatever the methodology, the project should address 'unit testing'
+and 'integration testing'.
+====
+
+[NOTE]
+.You should
+====
+[{incremental}]
+- *systematically* write *testing programs*
+- execute them *regularly*
+====
+
+ifdef::slides[:leveloffset: +1]
+
+//include::scrum.adoc[]
+
+//----------------------------- Quizz ------------------
+include::quizz.asc[]
