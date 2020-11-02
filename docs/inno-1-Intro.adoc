@@ -52,7 +52,7 @@ image::whoAreU.jpg[width=70%]
 == Looking for...
 
 - Is there any *French speaking* student?
-- Who is also registered in Design Pattern ?
+- Who is also registered in Design Pattern?
 
 == Materials in live... icon:mobile[] icon:tablet[] icon:laptop[]
 
