@@ -12,7 +12,7 @@ v20.1 {localdate}
 :experimental:
 :numbered!:
 :status:
-:base: http://jmbruel.github.io/nnopolisModernApplicationProduction
+:base: http://jmbruel.github.io/InnopolisModernApplicationProduction
 :website: {base}
 :baseURL: https://github.com/jmbruel/InnopolisModernApplicationProduction
 :jmbtopic:
