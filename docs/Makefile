@@ -67,7 +67,6 @@ full.pdf: full.$(EXT) $(DEP)
 	$(DOCTOR) -b deckjs \
 	-T ../../asciidoctor-deck.js/templates/haml/ -a slides \
 	-a deckjs_theme=$(DECK) \
-	-r asciidoctor-diagram \
 	-a styledir=. \
 	-a stylesheet=$(STYLE) \
 	-a imagesdir=$(IMAGESDIR) \

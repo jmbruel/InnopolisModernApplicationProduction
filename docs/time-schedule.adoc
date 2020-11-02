@@ -11,26 +11,25 @@ NOTE: Dates for F20 session, and subject to modifications
 |===
 | # | Date | Topic
 
-| 1 | Feb. 28th | link:{base}/inno-1-Intro.html[Introduction]
-| 2 | Feb. 28th | link:{base}/inno-2-Agile.html[Agile methods]
-| 3 | Feb. 28th | Project setup
-| 4 | Feb. 29th | link:{base}/inno-3-Manifesto.html[Agile Manifesto]
-| 5 | Feb. 29th | link:{base}/inno-4-Scrum.html[Scrum practice]
-| 6 | Feb. 29th | Scrum practice
-| 7 | Feb. 29th | Team building
-| 8 | Feb. 29th | Sprint 0
-
-| 9-16 | Mar. 13-14 | Feedbacks on self-practice; Demo and presentations
-| *16-25* | *Mar. 27-28* | *Continuous Integration; Build techniques; Reporting*
-| 16 | Mar. 10th | link:{base}/inno-feedbacks.html[Plan for the venue]
-| 16 | Mar. 10th | link:{base}/inno-11-Recap.html[Feedbacks from last venue/presentations]
-| 17 | Mar. 10th | link:{base}/inno-4-Scrum.html[Scrum practice]  (quick reminder)
-| 18 | Mar. 10th | link:{base}/inno-5-tests.html[Tests] & Coding Dojo
-| 19 | Mar. 10th | link:{base}/inno-6-git.html[Git] (quick reminder)
-| 20 | Mar. 11th | link:{base}/inno-7-ci.html[Continuous Integration]
-| 21 | Mar. 11th | link:{base}/inno-8-testingCI.html[Tests & CI]
-| 22-23 | Mar. 11th | Work on project reporting
-| 24-25 | Mar. 11th | Work on project reporting, discuss evaluation
-| 26-32 | ?? | Quality assessment; Reporting; Exam; Course evaluation
+| 1 | Nov. 2nd | link:{base}/inno-1-Intro.html[Introduction]
+| 2 | Nov. 2nd | link:{base}/inno-2-Agile.html[Agile methods]
+| 3 | Nov. 2nd | Project setup
+| 4 | Nov. 9th | link:{base}/inno-3-Manifesto.html[Agile Manifesto]
+| 5 | Nov. 9th | link:{base}/inno-4-Scrum.html[Scrum practice]
+| 6 | Nov. 9th | Scrum practice
+| 7 | Nov. 9th | Team building
+| 8 | Nov. 9th | Sprint 0
+//
+// | 9-16 | Mar. 13-14 | Feedbacks on self-practice; Demo and presentations
+// | *16-25* | *Mar. 27-28* | *Continuous Integration; Build techniques; Reporting*
+// | 16 | Nov. 16 | link:{base}/inno-feedbacks.html[Plan for the venue]
+// | 16 | Nov. 16 | link:{base}/inno-11-Recap.html[Feedbacks from last venue/presentations]
+// | 17 | Nov. 16 | link:{base}/inno-4-Scrum.html[Scrum practice]  (quick reminder)
+| 9 | Nov. 16 | link:{base}/inno-5-tests.html[Tests] & Coding Dojo
+| 10 | Nov. 24 | link:{base}/inno-6-git.html[Git] (quick reminder)
+| 11 | Nov. 30th | link:{base}/inno-7-ci.html[Continuous Integration]
+| 12 | Dec. 7th | link:{base}/inno-8-testingCI.html[Tests & CI]
+| 13-20 | Dec. 14th | Work on project reporting
+| 20 | ?? | Quality assessment; Reporting; Exam; Course evaluation
 |===
 
