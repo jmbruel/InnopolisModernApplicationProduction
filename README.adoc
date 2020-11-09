@@ -76,6 +76,9 @@ NOTE: Dates for F20 session, and subject to modifications
 . Introduction and organization `2020/11/02`
 - {website}/inno-1-Intro.html[HTML] / {website}/inno-1-Intro.deckjs.html[Slides]
 //- {website}/TD1-uk.html[TD1] / {website}/TP1.html[TP1] => assignment 1
+- {website}/inno-2-Agile.html[HTML] / {website}/inno-2-Agile.deckjs.html[Slides]
+. Manifesto `2020/11/09`
+- {website}/inno-3-Manifesto.html[HTML] / {website}/inno-3-Manifesto.deckjs.html[Slides]
 
 //--------------------------------------------------------
 == pass:[<i class="fa fa-line-chart"></i>] Grading
