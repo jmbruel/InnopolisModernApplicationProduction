@@ -91,7 +91,7 @@ Here is the list of elements for the evaluation:
 
 - Weekly reports (40%) The best of the web-chart grading on the Sprints reports.
 - Final Project Report (30%) A PDF final report on your Agile project (Deadline: End of the Exams week #??).
-- Quiz on concepts and lectures (20%) Timed online quiz (precise date to be confirmed).
+- Quiz on concepts and lectures (30%) Timed online quiz (precise date to be confirmed).
 - Participation in live lectures (10% bonus) Simple way for me to take into account that some are always there while others are not...
 - Graded issues: successful merge requests (10% bonus) A list of graded issues will be available on the {baseURL}/issues[Github issues] (see the board {baseURL}/projects/1[here]).
 +
