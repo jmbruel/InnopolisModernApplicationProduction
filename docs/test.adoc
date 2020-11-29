@@ -1,0 +1,87 @@
+//---------------------------------
+// Cours MPA
+// (c) JMB - 2020
+//---------------------------------
+= Tests
+J.-M. Bruel <jbruel@gmail.com>
+v1.0 {localdate}
+:imagesdir: images
+:source-highlighter: highlightjs
+//:revealjs_theme: black, white, league, beige, sky, night, serif, simple, solarized, blood, moon
+:revealjs_theme: sky
+:revealjs_progress: true
+:revealjs_slideNumber: true
+:revealjs_history: true
+:revealjs_customtheme: css/jmb.css
+
+== My awesome test
+
+
+== Slide One
+
+* Foo
+* Bar
+* World
+
+[NOTE.speaker]
+--
+this my notes
+--
+
+== Slide Two
+
+Hello World - How are you ?
+
+[NOTE.speaker]
+--
+Nothing to say
+--
+
+[background-color="#25b5f7"]
+== Slide Three
+
+With another background color
+
+[%notitle]
+== Slide Four
+
+image::https://www.dev-mind.fr/img/logo/logo_1500-0d506d08a7.png[canvas,size=contain]
+
+
+[transition=zoom, %notitle]
+== Slide Five
+
+This slide will override the presentation transition and zoom!
+
+[transition-speed=fast, %notitle]
+== Slide Six
+
+Choose from three transition speeds: default, fast or slow!
+
+== Slide Seven
+
+[%step]
+* this
+* is
+* revealed
+* gradually
+
+== Slide Height
+
+Uses highlighted code
+
+[source, python]
+ ----
+print "Hello World"
+ ----
+
+== Slide Nine
+
+Top slide
+
+=== Slide Nine.One
+
+This is a vertical subslide
+
+[state=dynamic]
+== Slide Ten js...

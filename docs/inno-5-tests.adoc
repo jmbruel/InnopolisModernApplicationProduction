@@ -1,90 +1,31 @@
-//---------------------------------
-// Cours MPA
-// (c) JMB - 2016
-//---------------------------------
-[[MPA]]
-= Tests
-J.-M. Bruel <jbruel@gmail.com>
-v1.0 {localdate}
+= F[20] IPOD: Tests
+J.-M. Bruel -- jbruel@gmail.com -- v1.0 {localdate}
 :imagesdir: images
-//------------------------------------ variables de configuration
-// only used when master document
-ifndef::jmbtopic[]
-:linkcss:
-:git-version: 2.9.2
+:sectids!:
+:experimental:
+:stylesdir: styles
+:stylesheet: main.css
 :icons: font
 :experimental:
-:toc-title: Table des matières
-:toc: left
-:numbered:
-:status:
-:siteurl: http://jmbhome.github.io/teaching/topics/agile.html
-:bitlysiteurl: http://bit.ly/jmb-agile
-//------------------------------------ Slides uniquement
-ifdef::slides[]
-//--------------------- dzslides slides
-ifdef::dzslides[]
-:dzslides-style: tomorrow
-//:dzslides-style: stormy, watermelon, tomorrow, truffle, statement, default
-:dzslides-transition: fade
-:dzslides-fonts: family=Yanone+Kaffeesatz:400,700,200,300&family=Cedarville+Cursive
-//:dzslides-highlight: asciidoctor
-:dzslides-highlight: monokai
-:source-highlighter: highlightjs
-:dzslides-status:
-:topic: .topic
-:intro: .topic.intro
-:statement: .topic.statement
-:incremental: .incremental
-:source: .topic.source
-endif::dzslides[]
-//----------- deck.js --------------
-ifdef::deckjs-slides[]
-:viewport: width=1024, user-scalable=no
-//:backend: deckjs # Should be used in the asciidoctor command (asciidoctor -b deckjs)
-// swiss, neon, beamer, web-2.0
-:deckjs_theme: swiss
-//fade, horizontal-slide, vertical-slide
-//:deckjs_transition: fade
-:goto:
-:menu:
-//:navigation:
-:status:
-:sectids!:
-endif::deckjs-slides[]
-endif::slides[]
-//------------------------------------ HTML uniquement
-ifndef::slides[]
-:topic:
-:intro:
-:statement:
-:incremental: %step
-:source:
-endif::slides[]
-endif::jmbtopic[]
 
 // ------------------------------------------ definitions
 ifndef::definitions[]
-include::../definitions.txt[]
+include::definitions.txt[]
 endif::definitions[]
+:siteurl: https://jmbruel.github.io/InnopolisModernApplicationProduction/
+:bitlysiteurl: http://bit.ly/innopolis-map
 
-ifdef::slides[]
 
-[{topic}]
 == Materials in live... icon:mobile[] icon:tablet[] icon:laptop[]
 
 {bitlysiteurl}
 
 {siteurl}
 
-[{intro}]
 == Tests
 
-endif::slides[]
-
-
-Whatever development method you apply, tests are *the only way to ensure*
-that the delivered product *conforms to the client's requirements*.
+Whatever development method you apply, tests are [red]#*the only way to ensure*#
+that the delivered product [red]#*conforms to the client's requirements*#.
 
 http://douche.name/blog/nomenclature-des-tests-logiciels/
 
@@ -187,71 +128,39 @@ ifndef::slides[]
 endif::slides[]
 
 ifdef::slides[]
+[.compact]
 ==  Unit Tests (testing operations)
 
-link:src/MatriceEntierOperationsTest.java[]
-
-endif::slides[]
-
-ifndef::slides[]
-
 [source,java]
-.Testing program for Operations
 ----
 include::src/MatriceEntierOperationsTest.java[]
 ----
 endif::slides[]
 
-ifdef::slides[]
+[.compact]
 ==  Unit Tests (testing preconditions)
 
-link:src/MatriceEntierPreconditionsTest.java[]
-
-endif::slides[]
-
-ifndef::slides[]
-
 [source,java]
-.Testing program for Preconditions
 ----
 include::src/MatriceEntierPreconditionsTest.java[]
 ----
 
-endif::slides[]
-
-ifdef::slides[]
+[.compact]
 ==  Unit Tests (testing axioms)
 
-link:src/MatriceEntierAxiomsTest.java[]
-
-endif::slides[]
-
-ifndef::slides[]
-
 [source,java]
-.Testing program for Axioms
 ----
 include::src/MatriceEntierAxiomesTest.java[]
 ----
 
-endif::slides[]
-
-ifdef::slides[]
+[.compact]
 ==  Unit Tests (testing additional operations)
-
-link:src/MatriceEntierOpSupTest.java[]
-
-endif::slides[]
-
-ifndef::slides[]
 
 [source,java]
 .Testing program for Additional Operations
 ----
 include::src/MatriceEntierOpSupTest.java[]
 ----
-
-endif::slides[]
 
 ifdef::slides[==  Unit Tests]
 
@@ -268,10 +177,10 @@ The testing program is :
 [{topic}]
 == Integration Tests
 
-image::titanic.jpg[width=80%]
+image::titanic.jpg[role=crux,credit="source: Internet!"]
 
 ifdef::slides[==  Integration Tests]
-image::no-integration-testing.jpg[width=50%]
+image::no-integration-testing.jpg[width=80%,role=crux,credit="source: Internet!"]
 
 ifdef::slides[== Integration Tests]
 
@@ -283,7 +192,8 @@ It is required to:
 * test systems' interactions
 * no redo the unit tests
 
-ifdef::slides[== Integration Tests]
+[.compact]
+== Integration Tests
 
 [source,java]
 .Testing program of `JourSuivantAvecLibDate.class`
@@ -306,13 +216,10 @@ include::src/JourSuivantAvecLibDateTest.java[lines=1..33]
 <14> read another line on the display
 
 
-[{topic}]
+[.compact]
 == Tests implement simple algorithms
 
-ifndef::slides[]
 [source,java]
-.given/when/then
-endif::slides[]
 ----
 public void test_dates_invalids() {
   int[][] tabJeuDEssaiDatesInvalids = {  // <1>
@@ -369,3 +276,15 @@ http://blog.takipi.com/the-top-10-exceptions-types-in-production-java-applicatio
 
 //----------------------------- Quizz ------------------
 include::quizz.asc[]
+
+
+
+[.closing.segue.badge-right]
+== <Thank You!>
+
+
+[horizontal.contact]
+icon:twitter[]:: @jmbruel
+icon:globe[]:: https://jmbruel.netlify.com
+icon:github[]:: github.com/jmbruel
+

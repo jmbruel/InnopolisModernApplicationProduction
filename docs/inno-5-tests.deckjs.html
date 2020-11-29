@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=" http-equiv="Content-Type" />
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+<meta content="Asciidoctor 1.5.8" name="generator" />
+<meta content="J.-M. Bruel" name="author" />
+<title>Tests</title>
+<link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet" />
+<style>
+.conum { display: inline-block; color: white !important; background-color: #222222; -webkit-border-radius: 100px; border-radius: 100px; text-align: center; width: 1.2em; height: 1.2em; font-size: 0.9em; font-weight: bold; line-height: 1.2; font-family: Arial, sans-serif; font-style: normal; position: relative; top: -0.1em; }
+.conum * { color: white !important; }
+.conum + b { display: none; }
+.conum:after { content: attr(data-value); }
+.conum:not([data-value]):empty { display: none; }
+.colist table td:first-of-type { padding-right: 0.25em; }
+</style>
+<link href="./asciidoctor-pygments.css" rel="stylesheet" />
+<link href="deck.js/core/deck.core.css" rel="stylesheet" />
+<link href="deck.js/extensions/scale/deck.scale.css" media="screen" rel="stylesheet" />
+<link href="deck.js/extensions/status/deck.status.css" media="screen" rel="stylesheet" />
+<link href="deck.js/extensions/toc/deck.toc.css" media="screen" rel="stylesheet" />
+<link href="deck.js/themes/style/swiss.css" media="screen" rel="stylesheet" />
+<link href="deck.js/themes/transition/fade.css" media="screen" rel="stylesheet" />
+<link href="deck.js/core/print.css" media="print" rel="stylesheet" />
+<script src="deck.js/modernizr.custom.js"></script>
+</head>
+<body class="article" id="MPA">
+<div class="deck-container">
+<section class="slide" id="title-slide">
+<h1>Tests</h1>
+<span id="author">J.-M. Bruel</span>
+<br />
+<span id="email"><a href="mailto:jbruel@gmail.com">jbruel@gmail.com</a></span>
+<br />
+<span id="revnumber">version 1.0 2020-11-29</span>
+</section>
+<section class="slide" id="_materials_in_live">
+<h2>Materials in live&#8230;&#8203; <span class="icon"><i class="icon-mobile"></i></span> <span class="icon"><i class="icon-tablet"></i></span> <span class="icon"><i class="icon-laptop"></i></span></h2>
+<div class="paragraph"><p><a class="bare" href="http://bit.ly/jmb-agile">http://bit.ly/jmb-agile</a></p></div>
+<div class="paragraph"><p><a class="bare" href="http://jmbhome.github.io/teaching/topics/agile.html">http://jmbhome.github.io/teaching/topics/agile.html</a></p></div>
+</section>
+<section class="slide" id="_tests">
+<h2>Tests</h2>
+<div class="paragraph"><p>Whatever development method you apply, tests are <strong>the only way to ensure</strong>
+that the delivered product <strong>conforms to the client&#8217;s requirements</strong>.</p></div>
+<div class="paragraph"><p><a class="bare" href="http://douche.name/blog/nomenclature-des-tests-logiciels/">http://douche.name/blog/nomenclature-des-tests-logiciels/</a></p></div>
+</section>
+<section class="slide" id="_unit_tests">
+<h2>Unit Tests</h2>
+<div class="paragraph"><p>They are the simplest.
+But hence it is needed to &#8230;&#8203;</p></div>
+<div class="ulist {incremental}">
+<ul class="{incremental}">
+<li>forget 'manual' approaches</li>
+<li>explore their 'limitations'</li>
+<li>treate both the 'qualitative' and 'quantitative' aspects</li>
+</ul>
+</div>
+</section>
+<section class="slide" id="_unit_tests_2">
+<h2>Unit Tests</h2>
+<div class="paragraph"><p>Let&#8217;s consider the implementation of an abstract type: <code>MatrixInt</code></p></div>
+</section>
+<section class="slide" id="_unit_tests_operations">
+<h2>Unit Tests (operations)</h2>
+<div class="ulist">
+<ul>
+<li><p>
+Operations<div class="ulist {incremental}">
+<ul class="{incremental}">
+<li><code>createMatrix : Int * Int &#8594; MatrixInt</code></li>
+<li><code>getNbLines: MatrixInt &#8594; Int</code></li>
+<li><code>getNbColumns: MatrixInt &#8594; Int</code></li>
+<li>&#8230;&#8203;</li>
+</ul>
+</div></p></li>
+</ul>
+</div>
+</section>
+<section class="slide" id="_unit_tests_preconditions">
+<h2>Unit Tests (preconditions)</h2>
+<div class="ulist">
+<ul>
+<li><p>
+Preconditions<div class="ulist {incremental}">
+<ul class="{incremental}">
+<li><code>createMatrix(l,c) valid IF and ONLY IF ( l &gt; 0 ) AND ( c &gt; 0 )</code></li>
+<li><code>getElement(m,i,j) valid IF and ONLY IF ( 0 &lt; = i &lt; getNbLines(m) ) AND ( 0 &lt; = j &lt; getNbColumns(m))</code></li>
+<li>&#8230;&#8203;</li>
+</ul>
+</div></p></li>
+</ul>
+</div>
+</section>
+<section class="slide" id="_unit_tests_axioms">
+<h2>Unit Tests (axioms)</h2>
+<div class="ulist">
+<ul>
+<li><p>
+Axioms<div class="ulist {incremental}">
+<ul class="{incremental}">
+<li><code>getNbLines(createMatrix(l,c)) = l</code></li>
+<li><code>getNbColumns(createMatrix(l,c)) = c</code></li>
+<li><code>getElement(createMatrix(l,c),i,j) = 0</code></li>
+<li><code>isSquared(createMatrix(l,c)) IF and ONLY IF l = c</code></li>
+<li>&#8230;&#8203;</li>
+</ul>
+</div></p></li>
+</ul>
+</div>
+</section>
+<section class="slide" id="_unit_tests_testing_operations">
+<h2>Unit Tests (testing operations)</h2>
+<div class="paragraph"><p><a class="bare" href="src/MatriceEntierOperationsTest.java">src/MatriceEntierOperationsTest.java</a></p></div>
+</section>
+<section class="slide" id="_unit_tests_testing_preconditions">
+<h2>Unit Tests (testing preconditions)</h2>
+<div class="paragraph"><p><a class="bare" href="src/MatriceEntierPreconditionsTest.java">src/MatriceEntierPreconditionsTest.java</a></p></div>
+</section>
+<section class="slide" id="_unit_tests_testing_axioms">
+<h2>Unit Tests (testing axioms)</h2>
+<div class="paragraph"><p><a class="bare" href="src/MatriceEntierAxiomsTest.java">src/MatriceEntierAxiomsTest.java</a></p></div>
+</section>
+<section class="slide" id="_unit_tests_testing_additional_operations">
+<h2>Unit Tests (testing additional operations)</h2>
+<div class="paragraph"><p><a class="bare" href="src/MatriceEntierOpSupTest.java">src/MatriceEntierOpSupTest.java</a></p></div>
+</section>
+<section class="slide" id="_unit_tests_3">
+<h2>Unit Tests</h2>
+<div class="paragraph"><p>The testing program is :</p></div>
+<div class="ulist {incremental}">
+<ul class="{incremental}">
+<li><p>
+a <strong>regression</strong> detection tool<div class="ulist">
+<ul>
+<li>that should be run on each modification of the <code>MatrixInt</code> class</li>
+</ul>
+</div></p></li>
+<li><p>
+a <strong>specification</strong> <em>documentation</em><div class="ulist">
+<ul>
+<li>precise AND concise</li>
+</ul>
+</div></p></li>
+<li><p>
+a programmers' <em>documentation</em><div class="ulist">
+<ul>
+<li>operational</li>
+</ul>
+</div></p></li>
+</ul>
+</div>
+</section>
+<section class="slide" id="_integration_tests">
+<h2>Integration Tests</h2>
+<div class="imageblock">
+<div class="content">
+<img alt="titanic" src="images/titanic.jpg" width="80%" />
+</div>
+</div>
+</section>
+<section class="slide" id="_integration_tests_2">
+<h2>Integration Tests</h2>
+<div class="imageblock">
+<div class="content">
+<img alt="no integration testing" src="images/no-integration-testing.jpg" width="50%" />
+</div>
+</div>
+</section>
+<section class="slide" id="_integration_tests_3">
+<h2>Integration Tests</h2>
+<div class="paragraph"><p>It a more complicated activity.
+It is required to:</p></div>
+<div class="ulist {incremental}">
+<ul class="{incremental}">
+<li>test the client&#8217;s expectations/requirements</li>
+<li>test systems' interactions</li>
+<li>no redo the unit tests</li>
+</ul>
+</div>
+</section>
+<section class="slide" id="_integration_tests_4">
+<h2>Integration Tests</h2>
+<div class="listingblock">
+<div class="title">Testing program of <code>JourSuivantAvecLibDate.class</code></div>
+<div class="content">
+<pre class="pygments highlight"><code class="java language-java"><span></span><span class="tok-kn">import</span> <span class="tok-nn">junit.textui.TestRunner</span><span class="tok-o">;</span>&#x000A;<span class="tok-kn">import</span> <span class="tok-nn">junit.framework.TestSuite</span><span class="tok-o">;</span>&#x000A;<span class="tok-kn">import</span> <span class="tok-nn">junit.framework.TestCase</span><span class="tok-o">;</span>&#x000A;<span class="tok-kn">import</span> <span class="tok-nn">java.io.*</span><span class="tok-o">;</span>&#x000A;&#x000A;<span class="tok-kd">public</span> <span class="tok-kd">class</span> <span class="tok-nc">JourSuivantAvecLibDateTest</span> <span class="tok-kd">extends</span> <span class="tok-n">TestCase</span> <span class="tok-o">{</span>&#x000A;  <span class="tok-kd">static</span> <span class="tok-n">String</span> <span class="tok-n">programmeATester</span> <span class="tok-o">=</span> <span class="tok-s">&quot;JourSuivantAvecLibDate&quot;</span> <span class="tok-o">;</span>  <i class="conum" data-value="1"></i><b>(1)</b>&#x000A;  <span class="tok-n">Process</span> <span class="tok-n">executionProgrammeATester</span> <span class="tok-o">;</span>                          <i class="conum" data-value="2"></i><b>(2)</b>&#x000A;  <span class="tok-n">BufferedReader</span> <span class="tok-n">ecranProgrammeATester</span> <span class="tok-o">;</span>                       <i class="conum" data-value="3"></i><b>(3)</b>&#x000A;  <span class="tok-n">BufferedWriter</span> <span class="tok-n">clavierProgrammeATester</span> <span class="tok-o">;</span>                     <i class="conum" data-value="4"></i><b>(4)</b>&#x000A;&#x000A;  <span class="tok-n">String</span> <span class="tok-n">finDeLigne</span> <span class="tok-o">=</span> <span class="tok-n">System</span><span class="tok-o">.</span><span class="tok-na">getProperty</span><span class="tok-o">(</span><span class="tok-s">&quot;line.separator&quot;</span><span class="tok-o">)</span> <span class="tok-o">;</span>   <i class="conum" data-value="5"></i><b>(5)</b>&#x000A;&#x000A;  <span class="tok-kd">public</span> <span class="tok-kd">static</span> <span class="tok-kt">void</span> <span class="tok-nf">main</span><span class="tok-o">(</span><span class="tok-n">String</span><span class="tok-o">[]</span> <span class="tok-n">args</span><span class="tok-o">)</span> <span class="tok-o">{</span>&#x000A;    <span class="tok-k">if</span> <span class="tok-o">(</span> <span class="tok-n">args</span><span class="tok-o">.</span><span class="tok-na">length</span> <span class="tok-o">&gt;</span> <span class="tok-mi">0</span> <span class="tok-o">)</span> <span class="tok-o">{</span> <span class="tok-n">programmeATester</span> <span class="tok-o">=</span> <span class="tok-n">args</span><span class="tok-o">[</span><span class="tok-mi">0</span><span class="tok-o">]</span> <span class="tok-o">;</span> <span class="tok-o">}</span>&#x000A;    <span class="tok-n">System</span><span class="tok-o">.</span><span class="tok-na">out</span><span class="tok-o">.</span><span class="tok-na">println</span><span class="tok-o">(</span><span class="tok-s">&quot;Tests du programme : &quot;</span> <span class="tok-o">+</span> <span class="tok-n">programmeATester</span><span class="tok-o">);</span>&#x000A;    <span class="tok-n">junit</span><span class="tok-o">.</span><span class="tok-na">textui</span><span class="tok-o">.</span><span class="tok-na">TestRunner</span><span class="tok-o">.</span><span class="tok-na">run</span><span class="tok-o">(</span><span class="tok-k">new</span> <span class="tok-n">TestSuite</span><span class="tok-o">(</span><span class="tok-n">JourSuivantAvecLibDateTest</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">));</span> <i class="conum" data-value="6"></i><b>(6)</b>&#x000A;  <span class="tok-o">}</span>&#x000A;&#x000A;  <span class="tok-kd">protected</span> <span class="tok-kt">void</span> <span class="tok-nf">setUp</span><span class="tok-o">()</span> <span class="tok-kd">throws</span> <span class="tok-n">IOException</span> <span class="tok-o">{</span>  <i class="conum" data-value="7"></i><b>(7)</b>&#x000A;    <span class="tok-n">executionProgrammeATester</span> <span class="tok-o">=</span> <span class="tok-n">Runtime</span><span class="tok-o">.</span><span class="tok-na">getRuntime</span><span class="tok-o">().</span><span class="tok-na">exec</span><span class="tok-o">(</span><span class="tok-s">&quot;java -cp . &quot;</span><span class="tok-o">+</span><span class="tok-n">programmeATester</span><span class="tok-o">);</span> <i class="conum" data-value="8"></i><b>(8)</b>&#x000A;    <span class="tok-n">ecranProgrammeATester</span> <span class="tok-o">=</span> <span class="tok-k">new</span> <span class="tok-n">BufferedReader</span><span class="tok-o">(</span><span class="tok-k">new</span>  <span class="tok-n">InputStreamReader</span><span class="tok-o">(</span> <span class="tok-n">executionProgrammeATester</span><span class="tok-o">.</span><span class="tok-na">getInputStream</span><span class="tok-o">()</span> <span class="tok-o">));</span> <i class="conum" data-value="9"></i><b>(9)</b>&#x000A;    <span class="tok-n">clavierProgrammeATester</span>  <span class="tok-o">=</span> <span class="tok-k">new</span> <span class="tok-n">BufferedWriter</span><span class="tok-o">(</span><span class="tok-k">new</span> <span class="tok-n">OutputStreamWriter</span><span class="tok-o">(</span> <span class="tok-n">executionProgrammeATester</span><span class="tok-o">.</span><span class="tok-na">getOutputStream</span><span class="tok-o">()</span> <span class="tok-o">));</span> <i class="conum" data-value="10"></i><b>(10)</b>&#x000A;  <span class="tok-o">}</span>&#x000A;&#x000A;  <span class="tok-c1">// Saisies valides</span>&#x000A;  <span class="tok-kd">public</span> <span class="tok-kt">void</span> <span class="tok-nf">test_31_1_2013</span><span class="tok-o">()</span> <span class="tok-kd">throws</span> <span class="tok-n">IOException</span> <span class="tok-o">{</span>&#x000A;    <span class="tok-n">assertEquals</span><span class="tok-o">(</span><span class="tok-s">&quot;Affiche : &#39;Saisir une date : jour mois annee ? &#39;&quot;</span><span class="tok-o">,</span><span class="tok-s">&quot;Saisir une date : jour mois annee ? &quot;</span><span class="tok-o">,</span><span class="tok-n">ecranProgrammeATester</span><span class="tok-o">.</span><span class="tok-na">readLine</span><span class="tok-o">());</span> <i class="conum" data-value="11"></i><b>(11)</b>&#x000A;    <span class="tok-n">clavierProgrammeATester</span><span class="tok-o">.</span><span class="tok-na">write</span><span class="tok-o">(</span><span class="tok-s">&quot;31 1 2013&quot;</span><span class="tok-o">+</span><span class="tok-n">finDeLigne</span><span class="tok-o">);</span> <i class="conum" data-value="12"></i><b>(12)</b>&#x000A;    <span class="tok-n">clavierProgrammeATester</span><span class="tok-o">.</span><span class="tok-na">flush</span><span class="tok-o">();</span>                       <i class="conum" data-value="13"></i><b>(13)</b>&#x000A;    <span class="tok-n">assertEquals</span><span class="tok-o">(</span><span class="tok-s">&quot;Affiche : &#39;Le lendemain du 31/1/2013&#39;&quot;</span><span class="tok-o">,</span><span class="tok-s">&quot;Le lendemain du 31/1/2013&quot;</span><span class="tok-o">,</span><span class="tok-n">ecranProgrammeATester</span><span class="tok-o">.</span><span class="tok-na">readLine</span><span class="tok-o">());</span>&#x000A;    <span class="tok-n">assertEquals</span><span class="tok-o">(</span><span class="tok-s">&quot;Affiche : &#39;sera le 1/2/2013.&#39;&quot;</span><span class="tok-o">,</span><span class="tok-s">&quot;sera le 1/2/2013.&quot;</span><span class="tok-o">,</span><span class="tok-n">ecranProgrammeATester</span><span class="tok-o">.</span><span class="tok-na">readLine</span><span class="tok-o">());</span> <i class="conum" data-value="14"></i><b>(14)</b>&#x000A;  <span class="tok-o">}</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>name of the app to be tested</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Process = the running program</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>link to the display of the running program</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>link to the keyboard of the running program</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td><strong>portable</strong> carrier return</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>launching of all the functions starting by 'test'</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="7"></i><b>7</b></td>
+<td>function (re-)executed before each testing function AND launch the program to be tested</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="8"></i><b>8</b></td>
+<td>launching of the program</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="9"></i><b>9</b></td>
+<td>connect to the display</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="10"></i><b>10</b></td>
+<td>connect to the keyboard</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="11"></i><b>11</b></td>
+<td>read a line on the display</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="12"></i><b>12</b></td>
+<td>send a line to the keyboard</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="13"></i><b>13</b></td>
+<td>force the keyboard flush</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="14"></i><b>14</b></td>
+<td>read another line on the display</td>
+</tr>
+</table>
+</div>
+</section>
+<section class="slide" id="_tests_implement_simple_algorithms">
+<h2>Tests implement simple algorithms</h2>
+<div class="listingblock">
+<div class="content">
+<pre><code>public void test_dates_invalids() {&#x000A;  int[][] tabJeuDEssaiDatesInvalids = {  <i class="conum" data-value="1"></i><b>(1)</b>&#x000A;      {1,1,1581},{0,1,2013},{99,99,2099},&#x000A;      {32,1,2013},{29,2,2013},{32,3,2013},&#x000A;      {31,4,2013},{32,5,2013},{31,6,2013},&#x000A;      {32,7,2013},{32,8,2013},{31,9,2013},&#x000A;      {32,10,2013},{31,11,2013},{32,12,2013},&#x000A;      {29,2,1900},{30,2,2000}&#x000A;  } ;&#x000A;  for ( int indice = 0, taille = tabJeuDEssaiDatesInvalids.length;&#x000A;        indice &lt; taille ;&#x000A;        indice = indice + 1){&#x000A;    int[] date = tabJeuDEssaiDatesInvalids[indice] ;&#x000A;    assertFalse(date[0]+"/"+date[1]+"/"+date[2]+" est invalid"&#x000A;    , LibDate.datevalid(date[0],date[1],date[2])); <i class="conum" data-value="2"></i><b>(2)</b> <i class="conum" data-value="3"></i><b>(3)</b>&#x000A;  }&#x000A;  bilanAssertions = bilanAssertions + tabJeuDEssaiDatesInvalids.length ;&#x000A;}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><strong>given</strong>: in the following situations</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td><strong>when</strong>: when we check the validity of a date</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td><strong>then</strong>: we should get <code>false</code></td>
+</tr>
+</table>
+</div>
+</section>
+<section class="slide" id="_can_everything_be_tested">
+<h2>Can everything be tested ?</h2>
+<div class="ulist {incremental}">
+<ul class="{incremental}">
+<li>librairies</li>
+<li>system interactions (concurrency, etc.)</li>
+<li>network services</li>
+<li>graphical interfaces (html, java, flash, etc.)</li>
+<li>&#8230;&#8203;</li>
+<li>MAY BE NOT, but try anyway!</li>
+</ul>
+</div>
+</section>
+<section class="slide" id="_all_the_strategies_are_exploitable">
+<h2>All the strategies are exploitable</h2>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="icon-note"></i>
+</td>
+<td class="content">
+<div class="ulist {incremental}">
+<ul class="{incremental}">
+<li>Write a program that run the tests</li>
+<li>Write the tests of a given program</li>
+<li>Code a feature AND add the corresponding test</li>
+<li>Add a test AND integrate the corresponding functionnality (TDD)</li>
+<li>Find back the balance between Program / Tesing Program</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</section>
+<section class="slide" id="_most_common_mistakes_in_programming">
+<h2>Most common mistakes in programming</h2>
+<div class="paragraph"><p><a class="bare" href="http://blog.takipi.com/the-top-10-exceptions-types-in-production-java-applications-based-on-1b-events/?utm_content=buffer0c58b&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer">http://blog.takipi.com/the-top-10-exceptions-types-in-production-java-applications-based-on-1b-events/?utm_content=buffer0c58b&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer</a></p></div>
+</section>
+<section class="slide" id="_ready_for_a_quizz">
+<h2>Ready for a quizz?</h2>
+<div class="imageblock">
+<div class="content">
+<img alt="tuxteacher" src="images/icons/tuxteacher.png" />
+</div>
+</div>
+</section>
+<section class="slide" id="_ready_for_a_quizz_2">
+<h2>Ready for a quizz?</h2>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="icon-warning"></i>
+</td>
+<td class="content">
+<div class="title"><strong>QUESTION</strong></div>
+<div class="ulist">
+<ul>
+<li>Connect on: <a class="bare" href="http://www.socrative.com/">http://www.socrative.com/</a> (<strong>student login</strong>)</li>
+<li>Or download the student app <span class="image"><img alt="socrative2" src="images/socrative2.png" width="10%" /></span></li>
+<li>Choose room # <strong>JMB42</strong></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="http://www.socrative.com/">
+<img alt="socrative1" src="images/socrative1.png" width="50%" />
+</a>
+</div>
+</div>
+</section>
+<p aria-role="status" class="deck-status">
+<span class="deck-status-current"></span>
+/
+<span class="deck-status-total"></span>
+</p>
+</div>
+<script src="deck.js/jquery.min.js"></script>
+<script src="deck.js/core/deck.core.js"></script>
+<script src="deck.js/extensions/scale/deck.scale.js"></script>
+<script src="deck.js/extensions/status/deck.status.js"></script>
+<script src="deck.js/extensions/toc/deck.toc.js"></script>
+<div class="deck-toc"></div>
+<script type="text/javascript">
+  //<![CDATA[
+    (function($, deck, undefined) {
+      $.deck.defaults.keys['previous'] = [8, 33, 37, 39];
+      $.deck.defaults.keys['next'] = [13, 32, 34, 39];
+    
+      $.extend(true, $[deck].defaults, {
+          countNested: false
+      });
+    
+      $.deck('.slide');
+    })(jQuery, 'deck');
+  //]]>
+</script>
+<style type="text/css">
+  /*<![CDATA[*/
+    .slide.canvas-image {
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: -moz-box;
+    display: -webkit-box;
+    display: -ms-box;
+    display: box;
+    -moz-box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -ms-box-orient: vertical;
+    box-orient: vertical;
+    -moz-box-align: start;
+    -webkit-box-align: start;
+    -ms-box-align: start;
+    box-align: start;
+    -moz-box-pack: start;
+    -webkit-box-pack: start;
+    -ms-box-pack: start;
+    box-pack: start;}
+    
+    .bottom-left {
+      left: 1%;
+      bottom: 20%; }
+    
+    .top-left {
+      left: 1%;
+      top: 20%; }
+    
+    .bottom-right {
+      right: 1%;
+      bottom: 20%; }
+    
+    .top-right {
+      right: 1%;
+      top: 20%; }
+    
+    .center-up {
+      right: 50%;
+      top: 1%;
+    }
+    
+    .center-down {
+      right: 50%;
+      bottom: 1%;
+    }
+    .canvas-image .canvas-caption p {
+      text-align: center;
+      padding-top: 0;
+      padding: 0;
+      -moz-transform: none;
+      -webkit-transform: none;
+      -o-transform: none;
+      -ms-transform: none;
+      transform: none;
+      display: inline;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.7);
+      font-weight: bold;
+      font-size: 58px;
+      -webkit-box-shadow: 2px 2px 2px #000;
+      -moz-box-shadow: 2px 2px 2px #000;
+      box-shadow: 2px 2px 2px #000;
+      padding: 1rem;
+      color: white; }
+    kbd.keyseq { color: #555555; }
+    kbd:not(.keyseq) {
+      display: inline-block;
+      color: #222222;
+      font-size: 0.7em;
+      line-height: 1.4;
+      background-color: #F7F7F7;
+      border: 1px solid #ccc;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+      -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px white inset;
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px white inset;
+      margin: -0.15em 0.15em 0 0.15em;
+      padding: 0.2em 0.6em;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+    kbd kbd:first-child { margin-left: 0; }
+    kbd kbd:last-child { margin-right: 0; }
+  /*]]>*/
+</style>
+</body>
+</html>

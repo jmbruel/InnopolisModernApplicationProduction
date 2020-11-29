@@ -1,0 +1,40 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700%7CFauna+One&display=swap);
+
+body {
+  background: #fffff;
+  font-family: Yanone,Roboto, Arial, sans-serif;
+  color: #000000;
+}
+
+.reveal {
+    font-family: Yanone,Roboto, Arial, sans-serif;
+    font-size: 40px;
+    font-weight: normal;
+    color: #0000; 
+}
+
+  body:before {
+    content: ' ';
+    position: fixed;
+    bottom: 1em;
+    left: 1em;
+    width: 6em;
+    height: 8em;
+    background: url(../images/sm@rt-logo.png);
+    background-size: 6em;
+    background-repeat: no-repeat;
+    background-position: 3% 96%; }
+  
+  body:after {
+    content: '© JMB 2020';
+    position: fixed;
+    padding: 1em;
+    width: 100%;
+    bottom: 0;
+    height: 1em;
+    background-color: #004d7f;
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+  }

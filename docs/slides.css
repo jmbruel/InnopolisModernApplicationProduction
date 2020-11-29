@@ -1,0 +1,91 @@
+@page {
+  size: 1024px 768px;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+html {
+  font-size: 16pt;
+}
+
+.slide {
+  position: relative;
+  width: 1024px;
+  height: 768px;
+  padding: 10px;
+
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.slide.title {
+  justify-content: center;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.slide.title h1 {
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.no-title > h2 {
+  display: none;
+}
+
+.slide > footer {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.slide.title > footer > .author::before {
+  content: 'by ';
+}
+
+.slide.title > footer {
+  text-align: center;
+  position: inherit;
+  right: auto;
+  bottom: auto;
+  color: #ba3925;
+}
+
+.slide::after {
+  content: attr(data-slide-number) "/" attr(data-slide-count);
+  counter-increment: slide;
+  font-size: .75rem;
+  position: absolute;
+  bottom: 1.25rem;
+  right: 3.75rem;
+  line-height: 1.9;
+}
+
+.slide.title::after {
+  content: ''
+}
+
+.columns-2 {
+  display: flex;
+}
+
+.columns-2 > * {
+  flex: 0 0 50%;
+  padding-right: 2rem;
+}
+
+.exampleblock.column > .content {
+  background-color: inherit;
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}

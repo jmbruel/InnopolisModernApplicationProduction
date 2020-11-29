@@ -8,18 +8,19 @@ IMAGESDIR=images
 #HIGHLIGHT=coderay
 #HIGHLIGHT=highlightjs
 #HIGHLIGHT=prettify
-HIGHLIGHT=pygments
+#HIGHLIGHT=pygments
+HIGHLIGHT=rouge
 #DOCTOR=asciidoctor -b html5 -a data-uri -a icons=font -a images=$(IMAGESDIR) -a source-highlighter=$(HIGHLIGHT)
-DOCTOR=asciidoctor -b html5 -a icons=font -a images=$(IMAGESDIR) -a source-highlighter=$(HIGHLIGHT)
+DOCTOR=asciidoctor  -a icons=font -a images=$(IMAGESDIR) -a source-highlighter=$(HIGHLIGHT)
 #BACKENDS=asciidoctor-deck.js
 #DECKJS=$(BACKENDS)/templates/haml/
-BACKENDS=../asciidoctor-backends
-DECKJS=$(BACKENDS)/haml/
+BACKENDS=../../../lib/asciidoctor-deck.js
+DECKJS=$(BACKENDS)/template/haml
 #DECK=web-2.0
 DECK=swiss
 #DECK=neon
 #DECK=beamer
-DZSLIDES=../../asciidoctor-backends/slim/dzslides
+DZSLIDES=/Users/jmb/localdev/lib/asciidoctor-backends/slim/dzslides
 EXT=adoc
 PANDOC=pandoc
 OUTPUT=.
@@ -65,7 +66,7 @@ full.pdf: full.$(EXT) $(DEP)
 %.deckjs.html: %.$(EXT)  $(DEP)
 	@echo '==> Compiling asciidoc files to generate Deckjs'
 	$(DOCTOR) -b deckjs \
-	-T ../../asciidoctor-deck.js/templates/haml/ -a slides \
+	-T $(DECKJS) -a slides \
 	-a deckjs_theme=$(DECK) \
 	-a styledir=. \
 	-a stylesheet=$(STYLE) \
@@ -124,6 +125,9 @@ roadmap.html: $(MAIN).$(EXT)
 	@echo '==> Compiling asciidoc files with Asciidoctor to generate HTML'
 	$(DOCTOR) -a prof -a correction -a compact -a theme=compact -b html5 -a numbered \
 	-a data-uri $< -o $@
+
+%.pdf: %.$(EXT) $(DEP)
+	asciidoctor-web-pdf --template-require ./template.js -a slides $<
 
 README.html: README.adoc
 	$(DOCTOR) -a toc2 -b html5 -a numbered -a stylesheet=$(STYLE) -a data-uri README.adoc
