@@ -1,0 +1,371 @@
+//---------------------------------
+// Cours MPA
+// (c) JMB - 2016
+//---------------------------------
+[[MPA]]
+= Tests
+J.-M. Bruel <jbruel@gmail.com>
+v1.0 {localdate}
+:imagesdir: images
+//------------------------------------ variables de configuration
+// only used when master document
+ifndef::jmbtopic[]
+:linkcss:
+:git-version: 2.9.2
+:icons: font
+:experimental:
+:toc-title: Table des matières
+:toc: left
+:numbered:
+:status:
+:siteurl: http://jmbhome.github.io/teaching/topics/agile.html
+:bitlysiteurl: http://bit.ly/jmb-agile
+//------------------------------------ Slides uniquement
+ifdef::slides[]
+//--------------------- dzslides slides
+ifdef::dzslides[]
+:dzslides-style: tomorrow
+//:dzslides-style: stormy, watermelon, tomorrow, truffle, statement, default
+:dzslides-transition: fade
+:dzslides-fonts: family=Yanone+Kaffeesatz:400,700,200,300&family=Cedarville+Cursive
+//:dzslides-highlight: asciidoctor
+:dzslides-highlight: monokai
+:source-highlighter: highlightjs
+:dzslides-status:
+:topic: .topic
+:intro: .topic.intro
+:statement: .topic.statement
+:incremental: .incremental
+:source: .topic.source
+endif::dzslides[]
+//----------- deck.js --------------
+ifdef::deckjs-slides[]
+:viewport: width=1024, user-scalable=no
+//:backend: deckjs # Should be used in the asciidoctor command (asciidoctor -b deckjs)
+// swiss, neon, beamer, web-2.0
+:deckjs_theme: swiss
+//fade, horizontal-slide, vertical-slide
+//:deckjs_transition: fade
+:goto:
+:menu:
+//:navigation:
+:status:
+:sectids!:
+endif::deckjs-slides[]
+endif::slides[]
+//------------------------------------ HTML uniquement
+ifndef::slides[]
+:topic:
+:intro:
+:statement:
+:incremental: %step
+:source:
+endif::slides[]
+endif::jmbtopic[]
+
+// ------------------------------------------ definitions
+ifndef::definitions[]
+include::../definitions.txt[]
+endif::definitions[]
+
+ifdef::slides[]
+
+[{topic}]
+== Materials in live... icon:mobile[] icon:tablet[] icon:laptop[]
+
+{bitlysiteurl}
+
+{siteurl}
+
+[{intro}]
+== Tests
+
+endif::slides[]
+
+
+Whatever development method you apply, tests are *the only way to ensure*
+that the delivered product *conforms to the client's requirements*.
+
+http://douche.name/blog/nomenclature-des-tests-logiciels/
+
+[{topic}]
+== Unit Tests
+
+They are the simplest.
+But hence it is needed to ...
+
+[{incremental}]
+* forget 'manual' approaches
+* explore their 'limitations'
+* treate both the 'qualitative' and 'quantitative' aspects
+
+ifdef::slides[==  Unit Tests]
+
+Let's consider the implementation of an abstract type: `MatrixInt`
+
+ifdef::slides[==  Unit Tests (operations)]
+
+* Operations
+[{incremental}]
+** `createMatrix : Int * Int -> MatrixInt`
+** `getNbLines: MatrixInt -> Int`
+** `getNbColumns: MatrixInt -> Int`
+** ...
+
+ifdef::slides[==  Unit Tests (preconditions)]
+
+* Preconditions
+[{incremental}]
+** `createMatrix(l,c) valid IF and ONLY IF ( l > 0 ) AND ( c > 0 )`
+** `getElement(m,i,j) valid IF and ONLY IF ( 0 < = i < getNbLines(m) ) AND ( 0 < = j < getNbColumns(m))`
+** ...
+
+ifdef::slides[==  Unit Tests (axioms)]
+
+* Axioms
+[{incremental}]
+** `getNbLines(createMatrix(l,c)) = l`
+** `getNbColumns(createMatrix(l,c)) = c`
+** `getElement(createMatrix(l,c),i,j) = 0`
+** `isSquared(createMatrix(l,c)) IF and ONLY IF l = c`
+** ...
+
+ifndef::slides[]
+[TIP]
+.Spécifications
+====
+.Opérations
+--
+. `createMatrix : Int * Int -> MatrixInt`
+. `getNbLines : MatrixInt -> Int`
+. `getNbColumns : MatrixInt -> Int`
+. `getElement : MatrixInt * Int * Int -> Int`
+. `somLine : MatrixInt * Int -> Int`
+. `somColumn : MatriceColumn * Int -> Int`
+. `isSquared : MatrixInt -> Boolean`
+. `isDiagonal : MatrixInt -> Boolean`
+. `setElement : MatrixInt * Int * Int * Int -> MatrixInt`
+. `setFirstDiagonal : MatrixInt * Int -> MatrixInt`
+. `setSecondDiagonal : MatrixInt * Int -> MatrixInt`
+. `mulMatNombre : MatrixInt * Int -> MatrixInt`
+--
+
+
+.Preconditions
+--
+. `createMatrix(l,c) valid IF and ONLY IF ( l > 0 ) AND ( c > 0 )`
+. `getElement(m,i,j) valid IF and ONLY IF ( 0 < = i < getNbLines(m) ) AND ( 0 < = j < getNbColumns(m))`
+. `setElement(m,i,j,n) valid IF and ONLY IF ( 0 < = i < getNbLines(m) ) AND ( 0 < = j < getNbColumns(m))`
+. `somLine(m,i) valid IF and ONLY IF 0 < = i < getNbLines(m)`
+. `somColumn(m,j) valid IF and ONLY IF  0 < = j < getNbColumns(m)`
+. `setFirstDiagonal(m,n) valid IF and ONLY IF isSquared(m)`
+. `setSecondDiagonal(m,n) valid IF and ONLY IF isSquared(m)`
+. `isDiagonal(m) valid IF and ONLY IF isSquared(m)`
+--
+
+.Axiomes
+
+. `getNbLines(createMatrix(l,c)) = l`
+. `getNbColumns(createMatrix(l,c)) = c`
+. `getElement(createMatrix(l,c),i,j) = 0`
+. `somLine(createMatrix(l,c),i) = 0`
+. `somColumn(createMatrix(l,c),j) = 0`
+. `isSquared(createMatrix(l,c)) IF and ONLY IF l = c`
+. `isDiagonal(createMatrix(lc,lc)) = VRAI`
+. `getNbLines(setFirstDiagonal(m,n)) = getNbLines(m)`
+. `getNbColumns(setFirstDiagonal(m,n)) = getNbColumns(m)`
+. `getElement(setFirstDiagonal(m,n),ij,ij) = n`
+. `getElement(setFirstDiagonal(m,n),i,j) = getElement(m,i,j)`
+. `somLine(setFirstDiagonal(m,n),i) = somLine(m,i) ` n - getElement(m,i,i)`
+. `somColumn(setFirstDiagonal(m,n),j) = somColumn(m,j) ` n - getElement(m,j,j)`
+. `somLine(setSecondDiagonal(m,n),i) = somLine(m,i) ` n - getElement(m,i,getNbColumns(m) - 1 - i)`
+. `somColumn(setSecondDiagonal(m,n),j) = somColumn(m,j) ` n - getElement(m,j,getNbLines(m) -1 - j)`
+. `somLine(mulMatNombre(setFirstDiagonal(m,1),n),i) = somLine(m,i) ` n - getElement(m,i,i)`
+. `somColumn(mulMatNombre(setFirstDiagonal(m,1),n),j) = somColumn(m,j) ` n - getElement(m,j,j)`
+
+====
+endif::slides[]
+
+ifdef::slides[]
+==  Unit Tests (testing operations)
+
+link:src/MatriceEntierOperationsTest.java[]
+
+endif::slides[]
+
+ifndef::slides[]
+
+[source,java]
+.Testing program for Operations
+----
+include::src/MatriceEntierOperationsTest.java[]
+----
+endif::slides[]
+
+ifdef::slides[]
+==  Unit Tests (testing preconditions)
+
+link:src/MatriceEntierPreconditionsTest.java[]
+
+endif::slides[]
+
+ifndef::slides[]
+
+[source,java]
+.Testing program for Preconditions
+----
+include::src/MatriceEntierPreconditionsTest.java[]
+----
+
+endif::slides[]
+
+ifdef::slides[]
+==  Unit Tests (testing axioms)
+
+link:src/MatriceEntierAxiomsTest.java[]
+
+endif::slides[]
+
+ifndef::slides[]
+
+[source,java]
+.Testing program for Axioms
+----
+include::src/MatriceEntierAxiomesTest.java[]
+----
+
+endif::slides[]
+
+ifdef::slides[]
+==  Unit Tests (testing additional operations)
+
+link:src/MatriceEntierOpSupTest.java[]
+
+endif::slides[]
+
+ifndef::slides[]
+
+[source,java]
+.Testing program for Additional Operations
+----
+include::src/MatriceEntierOpSupTest.java[]
+----
+
+endif::slides[]
+
+ifdef::slides[==  Unit Tests]
+
+The testing program is :
+
+[{incremental}]
+* a *regression* detection tool
+** that should be run on each modification of the `MatrixInt` class
+* a *specification* _documentation_
+** precise AND concise
+* a programmers' _documentation_
+** operational
+
+[{topic}]
+== Integration Tests
+
+image::titanic.jpg[width=80%]
+
+ifdef::slides[==  Integration Tests]
+image::no-integration-testing.jpg[width=50%]
+
+ifdef::slides[== Integration Tests]
+
+It a more complicated activity.
+It is required to:
+
+[{incremental}]
+* test the client's expectations/requirements
+* test systems' interactions
+* no redo the unit tests
+
+ifdef::slides[== Integration Tests]
+
+[source,java]
+.Testing program of `JourSuivantAvecLibDate.class`
+----
+include::src/JourSuivantAvecLibDateTest.java[lines=1..33]
+----
+<1> name of the app to be tested
+<2> Process = the running program
+<3> link to the display of the running program
+<4> link to the keyboard of the running program
+<5> *portable* carrier return
+<6> launching of all the functions starting by 'test'
+<7> function (re-)executed before each testing function AND launch the program to be tested
+<8> launching of the program
+<9> connect to the display
+<10> connect to the keyboard
+<11> read a line on the display
+<12> send a line to the keyboard
+<13> force the keyboard flush
+<14> read another line on the display
+
+
+[{topic}]
+== Tests implement simple algorithms
+
+ifndef::slides[]
+[source,java]
+.given/when/then
+endif::slides[]
+----
+public void test_dates_invalids() {
+  int[][] tabJeuDEssaiDatesInvalids = {  // <1>
+      {1,1,1581},{0,1,2013},{99,99,2099},
+      {32,1,2013},{29,2,2013},{32,3,2013},
+      {31,4,2013},{32,5,2013},{31,6,2013},
+      {32,7,2013},{32,8,2013},{31,9,2013},
+      {32,10,2013},{31,11,2013},{32,12,2013},
+      {29,2,1900},{30,2,2000}
+  } ;
+  for ( int indice = 0, taille = tabJeuDEssaiDatesInvalids.length;
+        indice < taille ;
+        indice = indice + 1){
+    int[] date = tabJeuDEssaiDatesInvalids[indice] ;
+    assertFalse(date[0]+"/"+date[1]+"/"+date[2]+" est invalid"
+    , LibDate.datevalid(date[0],date[1],date[2])); // <2> <3>
+  }
+  bilanAssertions = bilanAssertions + tabJeuDEssaiDatesInvalids.length ;
+}
+----
+<1> *given*: in the following situations
+<2> *when*: when we check the validity of a date
+<3> *then*: we should get `false`
+
+
+[{topic}]
+== Can everything be tested ?
+
+[{incremental}]
+- librairies
+- system interactions (concurrency, etc.)
+- network services
+- graphical interfaces (html, java, flash, etc.)
+- ...
+- MAY BE NOT, but try anyway!
+
+[{topic}]
+== All the strategies are exploitable
+
+[NOTE]
+====
+[{incremental}]
+- Write a program that run the tests
+- Write the tests of a given program
+- Code a feature AND add the corresponding test
+- Add a test AND integrate the corresponding functionnality (TDD)
+- Find back the balance between Program / Tesing Program
+====
+
+[{topic}]
+== Most common mistakes in programming
+
+http://blog.takipi.com/the-top-10-exceptions-types-in-production-java-applications-based-on-1b-events/?utm_content=buffer0c58b&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
+
+//----------------------------- Quizz ------------------
+include::quizz.asc[]

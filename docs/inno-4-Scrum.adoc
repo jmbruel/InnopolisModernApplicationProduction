@@ -1,0 +1,265 @@
+//---------------------------------
+// Cours MPA
+// (c) JMB - 2016
+//---------------------------------
+[[MPA]]
+= Scrum
+J.-M. Bruel <jbruel@gmail.com>
+v1.0 {localdate}
+:imagesdir: images
+//------------------------------------ variables de configuration
+// only used when master document
+ifndef::jmbtopic[]
+:linkcss:
+:git-version: 2.9.2
+:icons: font
+:experimental:
+:toc-title: Table des matières
+:toc: left
+:numbered:
+:status:
+:siteurl: http://jmbhome.github.io/teaching/topics/agile.html
+:bitlysiteurl: http://bit.ly/jmb-agile
+//------------------------------------ Slides uniquement
+ifdef::slides[]
+//--------------------- dzslides slides
+ifdef::dzslides[]
+:dzslides-style: tomorrow
+//:dzslides-style: stormy, watermelon, tomorrow, truffle, statement, default
+:dzslides-transition: fade
+:dzslides-fonts: family=Yanone+Kaffeesatz:400,700,200,300&family=Cedarville+Cursive
+//:dzslides-highlight: asciidoctor
+:dzslides-highlight: monokai
+:source-highlighter: highlightjs
+:dzslides-status:
+:topic: .topic
+:intro: .topic.intro
+:statement: .topic.statement
+:incremental: .incremental
+:source: .topic.source
+endif::dzslides[]
+//----------- deck.js --------------
+ifdef::deckjs-slides[]
+:viewport: width=1024, user-scalable=no
+//:backend: deckjs # Should be used in the asciidoctor command (asciidoctor -b deckjs)
+// swiss, neon, beamer, web-2.0
+:deckjs_theme: swiss
+//fade, horizontal-slide, vertical-slide
+//:deckjs_transition: fade
+:goto:
+:menu:
+//:navigation:
+:status:
+:sectids!:
+endif::deckjs-slides[]
+endif::slides[]
+//------------------------------------ HTML uniquement
+ifndef::slides[]
+:topic:
+:intro:
+:statement:
+:incremental: %step
+:source:
+endif::slides[]
+endif::jmbtopic[]
+
+// ------------------------------------------ definitions
+ifndef::definitions[]
+include::../definitions.txt[]
+endif::definitions[]
+
+ifdef::slides[]
+
+[{topic}]
+== Materials in live... icon:mobile[] icon:tablet[] icon:laptop[]
+
+{bitlysiteurl}
+
+{siteurl}
+
+endif::slides[]
+
+// ------
+[{intro}]
+== The *SCRUM* agile method
+
+[{incremental}]
+- {Scrum} is an *agile* process dedicated to produce the *most client value*
+in the *shortest time*.
+- *Working* software is produced on every iteration (sprint)
+- The client provides *priorities*.
+
+ifdef::slides[== The *SCRUM* agile method]
+[{incremental}]
+- The team *self-organize* itself to better match client priorities
+- At the end of every sprint, everybody can check that the *product runs*
+(or not) and decide to deliver a release or not.
+
+ifdef::slides[:leveloffset: -1]
+
+// ------
+[{topic}]
+=== SCRUM roles
+
+The actors in {SCRUM} are:
+
+[{incremental}]
+The *Product Owner*:: the client or its representative, who is part of the team
+The *SCRUM Master*:: an animator, not a manager
+The *Team*:: everybody else, without specific role
+
+ifdef::slides[:leveloffset: -1]
+
+// ------
+[{topic}]
+==== Product Owner
+
+[{incremental}]
+- Define and is responsible of the product's *features*
+- Choose the dates and content of the *releases*
+- Is responsible of the ROI *return on investment*
+- Define  *priorities* in the product backlog
+- *Ajust* features and priorities at each sprint (if necessary)
+- *Accept* or *reject* results
+
+[{topic}]
+==== SCRUM Master
+
+[{incremental}]
+- Ensure the *sustainability* of the project
+- Help *applying* Scrum values and practices
+- Help resolving problems and fight impediments
+- Ensure that the team is fully functionnal and *productive*
+- Facilitate *cooperation* between team members
+- *Protect* the team from outside "noise"
+
+[{topic}]
+==== SCRUM Team
+
+[{incremental}]
+- 5 to 10 people, preferably fully dedicated to the project only
+- All roles and specialities together [detail]#Architecture, design, coding, GIU, tests, etc.#
+- Self-organize itself
+- Do not change during a sprint
+
+ifdef::slides[:leveloffset: -1]
+
+[{topic}]
+=== The SCRUM process
+
+ifdef::slides[.The Scrum process (source: https://en.wikipedia.org/wiki/Scrum_(software_development))]
+image::scrum-uk.png[width=100%]
+
+ifdef::slides[=== The SCRUM process]
+
+* Plannification of the following sprint
+[{incremental}]
+** Selection of product backlog items that will be developed during the sprint
+** Definition of the tasks and of the sprint backlog
+
+ifdef::slides[=== The SCRUM process]
+
+* Daily SCRUM (15mn)
+[{incremental}]
+** or "stand-up" meeting
+** what did I do yesterday ?
+** what will I do today ?
+** is there any particular problem ?
+
+ifdef::slides[=== The SCRUM process]
+
+* SPRINT review (15-30mn)
+[{incremental}]
+** Presentation of the application to the team or invited people
+** team velocity measure
+
+ifdef::slides[=== The SCRUM process]
+
+* Retrospective meeting (15mn)
+[{incremental}]
+** The team (including client) review its process
+** What went well: continued
+** What went wrong: let's improve
+
+ifdef::slides[=== The SCRUM process]
+
+* Release planning
+[{incremental}]
+** Define the items of the *product backlog* that will constitute the release(s)
+** Define the number of sprints and the dates of release
+** Done before first sprint by estimating team velocity (if unknown)
+** Updated at the end of each sprint
+
+[{topic}]
+=== The SCRUM artifacts
+
+[{incremental}]
+Product backlog:: list of *User Stories* ordered by (client) value
+Sprint backlogs:: list of *tasks* to be realized during the sprint to meet the selected features treated for this sprint
+Project burndowns:: graphical representation of the team *progress*
+
+ifdef::slides[:leveloffset: -2]
+
+[{topic}]
+==== Product Backlog
+
+[{incremental}]
+- Provided by the *Product Owner* at the beginning of the project
+- Ranked list of requirements (stories) sorted [detail]#by domain importance#
+- This ranking can be re-evaluated after each sprint review [detail]#by the Product Owner#
+- Stories can be added/removed at each sprint review [detail]#by the Product Owner#
+
+
+[{topic}]
+==== Sprint Backlog
+
+[{incremental}]
+- Defined during the sprint planning
+- List of tasks corresponding to the selected User Stories treated during the sprint
+- Tasks are "weighted" (most often in hours)
+- Time estimation of each task is updated at each daily SCRUM
+- The definition of these tasks is a kind of collective design
+
+[{topic}]
+==== Project Burndowns
+
+- The values of the product backlog items and the estimates of the sprint
+backlogs allow to draw a graphical representation of the progress of the project.
+
+ifdef::slides[:leveloffset: -3]
+
+[{topic}]
+===== Sprint Burndown
+
+[{incremental}]
+- Updated everyday
+- Show the remaining efforts
+
+ifndef::slides[.Example of Sprint Burndown (source: http://www.scrum-institute.org)]
+image::sprint-burndown.jpg[link="http://www.scrum-institute.org/Burndown_Chart.php",width=40%]
+
+NOTE: the *sprint burndown* can grow if tasks are added or re-evaluated as more costly.
+
+[{topic}]
+===== Product (or release) Burndown
+
+- Estimated at each end of sprint and concerns the remaining product backlog
+
+ifndef::slides[.Example of Product Burndown (source: http://www.scrum-institute.org)]
+image::productBurndown.jpg[link="http://www.scrum-institute.org/Burndown_Chart.php",width=70%]
+
+NOTE: the *release backlog* is always evolving, hence the curb is not necessary going always down
+
+ifdef::slides[:leveloffset: -2]
+
+[{topic}]
+==== Indicators
+
+[{incremental}]
+Velocity:: quantity of the product backlog values realised by the team during the sprint
+Capacity:: quantity of the product backlog values that will be realized at next sprint
+
+WARNING: The name "velocity" is missleading
+
+//----------------------------- Quizz ------------------
+include::quizz.asc[]
