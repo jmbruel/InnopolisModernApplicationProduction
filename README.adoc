@@ -4,7 +4,7 @@
 //---------------------------------
 = **M**odern **A**pplication **P**roduction 
 J.-M. Bruel <jbruel@gmail.com>
-v20.1 {localdate}
+v21.1 {localdate}
 :imagesdir: images
 //------------------------------------ variables de configuration
 // only used when master document
@@ -37,6 +37,7 @@ endif::[]
 
 :iu: https://university.innopolis.ru/en/[Innopolis University]
 :moodleIUS20: https://moodle.innopolis.university/course/view.php?id=414
+:moodleIUS21: https://moodle.innopolis.university/course/view.php?id=724
 :moodleIUF20: https://moodle.innopolis.university/course/view.php?id=574
 :bitlysiteurl: http://bit.ly/innopolis-map
 :baseMaterial: link:{website}
@@ -46,7 +47,7 @@ endif::[]
 WARNING: Content subject to regular updates!
 
 Welcome to the teaching materials of my elective course:
-{moodleIUF20}[F20] / {moodleIUS20}[S20] **M**odern **A**pplication **P**roduction.
+{moodleIUS21}[S21   ] **M**odern **A**pplication **P**roduction.
 
 In this course, you will learn and practice the main modern techniques to develop software, ranging from coding, testing, modeling, documenting, applying Agile methods, continuous integration, code quality assessment, etc.
 
@@ -71,15 +72,14 @@ Additional usefull tools:
 == pass:[<i class="fa fa-calendar"></i>] Schedule and organization
 //--------------------------------------------------------
 
-NOTE: Dates for F20 session, and subject to modifications
+NOTE: Dates for S21 session, and subject to modifications
 
-. Introduction and organization `2020/11/02`
+. Introduction and organization `2021/03/23`
 - Organization: {website}/inno-1-Intro.html[HTML] / {website}/inno-1-Intro.deckjs.html[Slides]
 //- {website}/TD1-uk.html[TD1] / {website}/TP1.html[TP1] => assignment 1
 - Agile basics: {website}/inno-2-Agile.html[HTML] / {website}/inno-2-Agile.deckjs.html[Slides]
-. Manifesto `2020/11/09`
-- {website}/inno-3-Manifesto.html[HTML] / {website}/inno-3-Manifesto.deckjs.html[Slides]
- / https://www.dropbox.com/sh/g8w2izswx9pdp5j/AAAqJyqQNayIbjyWvYYVpp7ba?dl=0[Recording of Nov. 9th]
+//. Manifesto `2020/11/09`
+//- {website}/inno-3-Manifesto.html[HTML] / {website}/inno-3-Manifesto.deckjs.html[Slides] / https://www.dropbox.com/sh/g8w2izswx9pdp5j/AAAqJyqQNayIbjyWvYYVpp7ba?dl=0[Recording of Nov. 9th]
 
 //--------------------------------------------------------
 == pass:[<i class="fa fa-line-chart"></i>] Grading
@@ -89,14 +89,10 @@ NOTE: Subject to discussion & evolution
 
 Here is the list of elements for the evaluation:
 
-- Weekly reports (40%) The best of the web-chart grading on the Sprints reports.
-- Final Project Report (30%) A PDF final report on your Agile project (Deadline: End of the Exams week #??).
-- Quiz on concepts and lectures (30%) Timed online quiz (precise date to be confirmed).
-- Participation in live lectures (10% bonus) Simple way for me to take into account that some are always there while others are not...
-- Graded issues: successful merge requests (10% bonus) A list of graded issues will be available on the {baseURL}/issues[Github issues] (see the board {baseURL}/projects/1[here]).
-+
-TIP: You can propose additional graded issues!
-+
+- Weekly reports (40%): The best of the web-chart grading on the Sprints reports.
+- Final Project Report (30%): A PDF final report on your Agile project (Deadline: End of the Exams week #??).
+- Quiz on concepts and lectures (30%): Timed online quiz (precise date to be confirmed).
+- Participation in live lectures (10% bonus): Simple way for me to take into account that some are always there while others are not...
 - MOOC success attendance (10% bonus) Follow {bm} MOOC: {agileMoocUrl} (Proof of success >60% will count in the evaluation)
 +
 ifndef::slides[.My own results]
@@ -110,8 +106,6 @@ image::mooc-results.png[width=70%]
 - pass:[<i class="fa fa-mobile"></i>] pass:[<i class="fa fa-tablet"></i>] pass:[<i class="fa fa-laptop"></i>] {bitlysiteurl}
 - pass:[<i class="fa fa-envelope"></i>] mailto:jbruel@gmail.com[jbruel@gmail.com]
 - pass:[<i class="fa fa-telegram"></i>] https://telegram.me/jmbruel[@jmbruel]
-- pass:[<i class="fa fa-users"></i>] Telegram group (for fun and quick exchange): https://t.me/joinchat/AAAAAFIU8TWAlK-7oCaSEg
-- pass:[<i class="fa fa-slack"></i>] Slack group (for tasks and Q&A): [To Be Announced...]
+- pass:[<i class="fa fa-users"></i>] Telegram group (for fun and quick exchange): [To Be Announced...]
 - pass:[<i class="fa fa-user"></i>] https://jmbruel.netlify.app
-- pass:[<i class="fa fa-calendar"></i>] https://doodle.com/mm/jeanmichelbruel/book-a-time[Book an appointment]
 

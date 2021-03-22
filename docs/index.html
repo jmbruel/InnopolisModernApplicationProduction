@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.11">
+<meta name="generator" content="Asciidoctor 2.0.12">
 <meta name="author" content="J.-M. Bruel">
 <title>Modern Application Production</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
@@ -104,12 +104,12 @@ h1{font-size:2.75em}
 h2{font-size:2.3125em}
 h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
 h4{font-size:1.4375em}}
-table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
+table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede;word-wrap:normal}
 table thead,table tfoot{background:#f7f8f7}
 table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
 table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
 table tr.even,table tr.alt{background:#f8f8f7}
-table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{line-height:1.6}
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
 h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
 .center{margin-left:auto;margin-right:auto}
@@ -207,7 +207,7 @@ table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font
 .admonitionblock>table td.icon{text-align:center;width:80px}
 .admonitionblock>table td.icon img{max-width:none}
 .admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
-.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6)}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
 .exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
 .exampleblock>.content>:first-child{margin-top:0}
@@ -263,9 +263,8 @@ pre.pygments .lineno::before{content:"";margin-right:-.125em}
 .quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
 .quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
 .quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;text-align:left;margin-right:0}
-table.tableblock{max-width:100%}
 p.tableblock:last-child{margin-bottom:0}
-td.tableblock>.content{margin-bottom:1.25em}
+td.tableblock>.content{margin-bottom:1.25em;word-wrap:anywhere}
 td.tableblock>.content>:last-child{margin-bottom:-1.25em}
 table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
 table.grid-all>*>tr>*{border-width:1px}
@@ -286,7 +285,7 @@ th.valign-top,td.valign-top{vertical-align:top}
 th.valign-bottom,td.valign-bottom{vertical-align:bottom}
 th.valign-middle,td.valign-middle{vertical-align:middle}
 table thead th,table tfoot th{font-weight:bold}
-tbody tr th{display:table-cell;line-height:1.6;background:#f7f8f7}
+tbody tr th{background:#f7f8f7}
 tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
 p.tableblock>code:only-child{background:none;padding:0}
 p.tableblock{font-size:1em}
@@ -315,6 +314,7 @@ ol.lowergreek{list-style-type:lower-greek}
 .hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
 td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
 td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+td.hdlist2{word-wrap:anywhere}
 .literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
 .colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
 .colist td:not([class]):first-child img{max-width:none}
@@ -446,7 +446,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="details">
 <span id="author" class="author">J.-M. Bruel</span><br>
 <span id="email" class="email"><a href="mailto:jbruel@gmail.com">jbruel@gmail.com</a></span><br>
-<span id="revnumber">version 20.1 2020-11-17</span>
+<span id="revnumber">version 21.1 2021-03-22</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -475,7 +475,7 @@ Content subject to regular updates!
 </div>
 <div class="paragraph">
 <p>Welcome to the teaching materials of my elective course:
-<a href="https://moodle.innopolis.university/course/view.php?id=574">F20</a> / <a href="https://moodle.innopolis.university/course/view.php?id=414">S20</a> <strong>M</strong>odern <strong>A</strong>pplication <strong>P</strong>roduction.</p>
+<a href="https://moodle.innopolis.university/course/view.php?id=724">S21   </a> <strong>M</strong>odern <strong>A</strong>pplication <strong>P</strong>roduction.</p>
 </div>
 <div class="paragraph">
 <p>In this course, you will learn and practice the main modern techniques to develop software, ranging from coding, testing, modeling, documenting, applying Agile methods, continuous integration, code quality assessment, etc.</p>
@@ -530,7 +530,7 @@ Content subject to regular updates!
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Dates for F20 session, and subject to modifications
+Dates for S21 session, and subject to modifications
 </td>
 </tr>
 </table>
@@ -538,7 +538,7 @@ Dates for F20 session, and subject to modifications
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Introduction and organization <code>2020/11/02</code></p>
+<p>Introduction and organization <code>2021/03/23</code></p>
 <div class="ulist">
 <ul>
 <li>
@@ -546,17 +546,6 @@ Dates for F20 session, and subject to modifications
 </li>
 <li>
 <p>Agile basics: <a href="http://jmbruel.github.io/InnopolisModernApplicationProduction/inno-2-Agile.html">HTML</a> / <a href="http://jmbruel.github.io/InnopolisModernApplicationProduction/inno-2-Agile.deckjs.html">Slides</a></p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Manifesto <code>2020/11/09</code></p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="http://jmbruel.github.io/InnopolisModernApplicationProduction/inno-3-Manifesto.html">HTML</a> / <a href="http://jmbruel.github.io/InnopolisModernApplicationProduction/inno-3-Manifesto.deckjs.html">Slides</a>
-/ <a href="https://www.dropbox.com/sh/g8w2izswx9pdp5j/AAAqJyqQNayIbjyWvYYVpp7ba?dl=0">Recording of Nov. 9th</a></p>
 </li>
 </ul>
 </div>
@@ -586,31 +575,16 @@ Subject to discussion &amp; evolution
 <div class="ulist">
 <ul>
 <li>
-<p>Weekly reports (40%) The best of the web-chart grading on the Sprints reports.</p>
+<p>Weekly reports (40%): The best of the web-chart grading on the Sprints reports.</p>
 </li>
 <li>
-<p>Final Project Report (30%) A PDF final report on your Agile project (Deadline: End of the Exams week #??).</p>
+<p>Final Project Report (30%): A PDF final report on your Agile project (Deadline: End of the Exams week #??).</p>
 </li>
 <li>
-<p>Quiz on concepts and lectures (30%) Timed online quiz (precise date to be confirmed).</p>
+<p>Quiz on concepts and lectures (30%): Timed online quiz (precise date to be confirmed).</p>
 </li>
 <li>
-<p>Participation in live lectures (10% bonus) Simple way for me to take into account that some are always there while others are not&#8230;&#8203;</p>
-</li>
-<li>
-<p>Graded issues: successful merge requests (10% bonus) A list of graded issues will be available on the <a href="https://github.com/jmbruel/InnopolisModernApplicationProduction/issues">Github issues</a> (see the board <a href="https://github.com/jmbruel/InnopolisModernApplicationProduction/projects/1">here</a>).</p>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-You can propose additional graded issues!
-</td>
-</tr>
-</table>
-</div>
+<p>Participation in live lectures (10% bonus): Simple way for me to take into account that some are always there while others are not&#8230;&#8203;</p>
 </li>
 <li>
 <p>MOOC success attendance (10% bonus) Follow <a href="mailto:bertrand.meyer@inf.ethz.ch">Bertrand Meyer</a> MOOC: <a href="https://www.edx.org/course/agile-software-development-ethx-asd-1x" class="bare">https://www.edx.org/course/agile-software-development-ethx-asd-1x</a> (Proof of success &gt;60% will count in the evaluation)</p>
@@ -640,16 +614,10 @@ You can propose additional graded issues!
 <p><i class="fa fa-telegram"></i> <a href="https://telegram.me/jmbruel">@jmbruel</a></p>
 </li>
 <li>
-<p><i class="fa fa-users"></i> Telegram group (for fun and quick exchange): <a href="https://t.me/joinchat/AAAAAFIU8TWAlK-7oCaSEg" class="bare">https://t.me/joinchat/AAAAAFIU8TWAlK-7oCaSEg</a></p>
-</li>
-<li>
-<p><i class="fa fa-slack"></i> Slack group (for tasks and Q&amp;A): [To Be Announced&#8230;&#8203;]</p>
+<p><i class="fa fa-users"></i> Telegram group (for fun and quick exchange): [To Be Announced&#8230;&#8203;]</p>
 </li>
 <li>
 <p><i class="fa fa-user"></i> <a href="https://jmbruel.netlify.app" class="bare">https://jmbruel.netlify.app</a></p>
-</li>
-<li>
-<p><i class="fa fa-calendar"></i> <a href="https://doodle.com/mm/jeanmichelbruel/book-a-time">Book an appointment</a></p>
 </li>
 </ul>
 </div>
@@ -658,8 +626,8 @@ You can propose additional graded issues!
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 20.1 2020-11-17<br>
-Last updated 2020-11-17 08:31:59 +0100
+Version 21.1 2021-03-22<br>
+Last updated 2021-03-22 14:30:10 +0100
 </div>
 </div>
 </body>
