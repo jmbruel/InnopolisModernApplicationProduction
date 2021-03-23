@@ -1,0 +1,26 @@
+ifdef::slides[]
+
+[{topic}]
+== Ready for a quizz?
+
+image::icons/tuxteacher.png[]
+
+== Ready for a quizz?
+
+endif::slides[]
+
+ifndef::slides[]
+:numbered!:
+== Quizz
+endif::slides[]
+
+.*QUESTION*
+[WARNING]
+====
+
+- Connect on: http://www.socrative.com/ (*student login*)
+- Or download the student app image:socrative2.png[width=10%]
+- Choose room # *JMB42*
+====
+
+image::socrative1.png[width=50%,link=http://www.socrative.com/]

@@ -2,9 +2,9 @@
 // Cours MPA - version UK
 // (c) JMB - 2016-2021
 //---------------------------------
-= **M**odern **A**pplication **P**roduction
+= Modern Application Production
 J.-M. Bruel <jbruel@gmail.com>
-v20.1 {localdate}
+v21.1 {localdate}
 :imagesdir: images
 //------------------------------------ variables de configuration
 // only used when master document
@@ -17,6 +17,35 @@ v20.1 {localdate}
 :siteurl: {base}
 :bitlysiteurl: http://bit.ly/innopolis-map
 :incremental: %step
+:map-s21-sheet: https://docs.google.com/spreadsheets/d/1Hk0_aHszsyd4Ki_9BvqgKrzRSj00dDEfs8Qt-9HTGxQ/edit?usp=sharing
+// we want local served fonts. Therefore patched sky.css
+:revealjs_theme: black
+//:revealjs_customtheme: css/sky.css
+:revealjs_autoSlide: 5000
+:revealjs_history: true
+:revealjs_fragmentInURL: true
+:revealjs_viewDistance: 5
+:revealjs_width: 1408
+:revealjs_height: 792
+:revealjs_controls: true
+:revealjs_controlsLayout: edges
+:revealjs_controlsTutorial: true
+:revealjs_slideNumber: c/t
+:revealjs_showSlideNumber: speaker
+:revealjs_autoPlayMedia: true
+:revealjs_defaultTiming: 42
+:revealjs_transitionSpeed: fast
+//:revealjs_parallaxBackgroundImage: images/background-landscape-light-orange.jpg
+:revealjs_parallaxBackgroundSize: 4936px 2092px
+//:customcss: css/presentation.css
+:imagesdir: images
+:source-highlighter: highlightjs
+//:highlightjs-theme: css/atom-one-light.css
+// we want local served font-awesome fonts
+:iconfont-remote!:
+//:iconfont-name: fonts/fontawesome/css/all
+:slides:
+:numbered!:
 
 include::../definitions.txt[]
 
@@ -32,9 +61,6 @@ include::../definitions.txt[]
 [{incremental}]
 - For not being able to travel...
 - For not speaking a single word of Russian! [detail]#Or too few#
-- 2nd time only (in English) for this course!
-- 3rd year for me teaching at Innopolis!
-
 
 include::whoAmI.asc[]
 
@@ -45,14 +71,19 @@ NOTE: I am here thanks to Pr. {bm}
 // 2020 list: https://docs.google.com/spreadsheets/d/1XSAVB8a0ZljweZB5R3J9F3XvB3o6HyXfqA6mLbDwKRY/edit?usp=sharing
 
 
-https://docs.google.com/spreadsheets/d/1Xs-3Ys7CfMk1zAr93QHwISDU2VxV4s7wagCR7KLFEMc/edit?usp=sharing
+{map-s21-sheet}
 
 image::whoAreU.jpg[width=70%]
+
+== The great S21 group
+
+WARNING: Some are missing.
+
+image::S21groupe.png[]
 
 == Looking for...
 
 - Is there any *French speaking* student?
-- Who is also registered in Design Pattern?
 
 == Materials in live... icon:mobile[] icon:tablet[] icon:laptop[]
 
@@ -66,10 +97,21 @@ Application::
 Production::
   => Professional activity => *build*
 Methods::
-  Agile Methods, wit focus on the {scrum} method
+  Agile Methods, with focus on the {scrum} method
 Tools::
   We will combine modern production tools
 
 include::time-schedule.adoc[]
 
+== icon:clipboard[] Evaluation
 
+[{incremental}]
+- Weekly reports (30%)
+- Final Project Report (30%)
+- Exam: quiz on concepts and lectures (40%)
+- Bonus _+10%_ (Extra MOOC by Bertrand Meyer, participation, ...)
+
+== icon:home[] Administrative aspects
+
+[{incremental}]
+- Moodle vs GitHub

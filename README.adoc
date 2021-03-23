@@ -1,6 +1,6 @@
 //---------------------------------
-// Cours MPA - version UK
-// (c) JMB - 2016-2020
+// MAP Course - version UK
+// (c) JMB - 2016-2021
 //---------------------------------
 = **M**odern **A**pplication **P**roduction 
 J.-M. Bruel <jbruel@gmail.com>
@@ -92,7 +92,7 @@ Here is the list of elements for the evaluation:
 - Weekly reports (40%): The best of the web-chart grading on the Sprints reports.
 - Final Project Report (30%): A PDF final report on your Agile project (Deadline: End of the Exams week #??).
 - Quiz on concepts and lectures (30%): Timed online quiz (precise date to be confirmed).
-- Participation in live lectures (10% bonus): Simple way for me to take into account that some are always there while others are not...
+- Participation in live lectures (10% bonus): Simple way for me to consider that some are always there while others are not.
 - MOOC success attendance (10% bonus) Follow {bm} MOOC: {agileMoocUrl} (Proof of success >60% will count in the evaluation)
 +
 ifndef::slides[.My own results]
