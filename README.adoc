@@ -64,7 +64,7 @@ Please make sure to have the following tools:
 - {java} (version 8 minimum)
 - {maven} (or {gradle} but you'll might have to adapt some build files)
 
-Additional usefull tools:
+Additional useful tools:
 
 - {graphviz}
 
@@ -106,6 +106,6 @@ image::mooc-results.png[width=70%]
 - pass:[<i class="fa fa-mobile"></i>] pass:[<i class="fa fa-tablet"></i>] pass:[<i class="fa fa-laptop"></i>] {bitlysiteurl}
 - pass:[<i class="fa fa-envelope"></i>] mailto:jbruel@gmail.com[jbruel@gmail.com]
 - pass:[<i class="fa fa-telegram"></i>] https://telegram.me/jmbruel[@jmbruel]
-- pass:[<i class="fa fa-users"></i>] Telegram group (for fun and quick exchange): [To Be Announced...]
+- pass:[<i class="fa fa-users"></i>] Telegram group (for fun and quick exchange): https://t.me/joinchat/s-v3UhXnsOM4MmEy
 - pass:[<i class="fa fa-user"></i>] https://jmbruel.netlify.app
 

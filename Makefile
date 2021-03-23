@@ -131,7 +131,7 @@ README.html: README.adoc
 
 deploy: README.html
 	cp README.html $(DOCS)/index.html
-	git commit -am "deploy: public support update"
+    git commit -am "🤖 DEPLOY: last updates"; git pull; git push
 	git push
 
 cours2:
