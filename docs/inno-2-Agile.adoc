@@ -5,7 +5,7 @@
 [[MPA]]
 = Project Management, Agility, Tests
 J.-M. Bruel <jbruel@gmail.com>
-v20.1 {localdate}
+v21.1 {localdate}
 :imagesdir: images
 //------------------------------------ variables de configuration
 // only used when master document
@@ -18,8 +18,9 @@ ifndef::jmbtopic[]
 :toc: left
 :numbered:
 :status:
-:siteurl: http://jmbhome.github.io/teaching/topics/agile.html
-:bitlysiteurl: http://bit.ly/jmb-agile
+:siteurl: https://jmbruel.github.io/teachingMaterials/
+:bitlysiteurl: https://bit.ly/jmb-teaching
+
 //------------------------------------ Slides uniquement
 ifdef::slides[]
 //--------------------- dzslides slides
@@ -62,7 +63,34 @@ ifndef::slides[]
 :source:
 endif::slides[]
 endif::jmbtopic[]
-
+// we want local served fonts. Therefore patched sky.css
+:revealjs_theme: 
+//:revealjs_customtheme: css/sky.css
+:revealjs_autoSlide: 5000
+:revealjs_history: true
+:revealjs_fragmentInURL: true
+:revealjs_viewDistance: 5
+:revealjs_width: 1408
+:revealjs_height: 792
+:revealjs_controls: true
+:revealjs_controlsLayout: edges
+:revealjs_controlsTutorial: true
+:revealjs_slideNumber: c/t
+:revealjs_showSlideNumber: speaker
+:revealjs_autoPlayMedia: true
+:revealjs_defaultTiming: 42
+:revealjs_transitionSpeed: fast
+//:revealjs_parallaxBackgroundImage: images/background-landscape-light-orange.jpg
+:revealjs_parallaxBackgroundSize: 4936px 2092px
+//:customcss: css/presentation.css
+:imagesdir: images
+:source-highlighter: highlightjs
+//:highlightjs-theme: css/atom-one-light.css
+// we want local served font-awesome fonts
+:iconfont-remote!:
+//:iconfont-name: fonts/fontawesome/css/all
+:slides!:
+:numbered!:
 // ------------------------------------------ definitions
 ifndef::definitions[]
 include::../definitions.txt[]
@@ -75,11 +103,11 @@ ifdef::slides[]
 
 {bitlysiteurl}
 
-{siteurl}
-
 endif::slides[]
 
-This course is dedicated to my lost friend Jean-Michel Inglebert...
+This course is dedicated to my lost friend 
+
+Jean-Michel Inglebert...
 
 ifndef::slides[.Students 2016 blazon: "Friday is troll day" ]
 image::blasonJMI.png[width=50%]
@@ -87,8 +115,6 @@ image::blasonJMI.png[width=50%]
 // ------------------------------------------ disclaimer
 [{intro}]
 == icon:briefcase[] *Projects* management
-
-ifdef::slides[:leveloffset: -1]
 
 // ------
 [{topic}]
@@ -206,8 +232,6 @@ ifdef::slides[:leveloffset: 0]
 [{intro}]
 == icon:wrench[] To *produce* applications
 
-ifdef::slides[== To *produce* applications]
-
 BUILD:: make, {ant}, {maven}, {ivy}, {gradle}, etc.
 =>:: we'll see that later (if needed)...
 Project Management tools::
@@ -218,7 +242,6 @@ Project Management tools::
 [{intro}]
 == icon:road[] Methods
 
-ifdef::slides[:leveloffset: -1]
 
 // ------
 [{topic}]
@@ -235,7 +258,7 @@ The V cycle adopts:
 - Followed by an *ascending* for coding, tests and integration.
 
 ifndef::slides[.Typicall V cycle (source: https://en.wikipedia.org/wiki/V-Model)]
-image::Vcycle.png[scaledwidth="90%"]
+image::Vcycle.png[width=50%, scaledwidth="90%"]
 
 [WARNING]
 ====
@@ -299,7 +322,7 @@ Develop a *web application* capable of *collecting*
 and *displaying* URLs.
 ====
 
-ifdef::slides[:leveloffset: -3]
+ifdef::slides[:leveloffset: -1]
 
 // ------
 [{topic}]

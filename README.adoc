@@ -74,12 +74,13 @@ Additional useful tools:
 
 NOTE: Dates for S21 session, and subject to modifications
 
-. Introduction and organization `2021/03/23`
+. `2021/03/23` Introduction and organization (https://www.dropbox.com/sh/bvsow06y93rx8p6/AAD9FyKrKaYuo69ZZW59Su9Da?dl=0[Zoom Recording])
 - Organization: {website}/inno-1-Intro.html[HTML] / {website}/inno-1-Intro.deckjs.html[Slides]
+- Traceability Project: https://github.com/jmbruel/MAP-S21-template
 //- {website}/TD1-uk.html[TD1] / {website}/TP1.html[TP1] => assignment 1
+. `2021/03/24` Lectures 
 - Agile basics: {website}/inno-2-Agile.html[HTML] / {website}/inno-2-Agile.deckjs.html[Slides]
-//. Manifesto `2020/11/09`
-//- {website}/inno-3-Manifesto.html[HTML] / {website}/inno-3-Manifesto.deckjs.html[Slides] / https://www.dropbox.com/sh/g8w2izswx9pdp5j/AAAqJyqQNayIbjyWvYYVpp7ba?dl=0[Recording of Nov. 9th]
+- Agile Manifesto: {website}/inno-3-Manifesto.html[HTML] / {website}/inno-3-Manifesto.deckjs.html[Slides]
 
 //--------------------------------------------------------
 == pass:[<i class="fa fa-line-chart"></i>] Grading

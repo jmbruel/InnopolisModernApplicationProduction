@@ -42,10 +42,10 @@ v21.1 {localdate}
 :source-highlighter: highlightjs
 //:highlightjs-theme: css/atom-one-light.css
 // we want local served font-awesome fonts
-:iconfont-remote!:
+//:iconfont-remote!:
 //:iconfont-name: fonts/fontawesome/css/all
-:slides:
-:numbered!:
+:slides!:
+:numbered:
 
 include::../definitions.txt[]
 
