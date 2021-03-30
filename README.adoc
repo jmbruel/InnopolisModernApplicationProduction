@@ -75,13 +75,22 @@ Additional useful tools:
 
 NOTE: Dates for S21 session, and subject to modifications
 
+//--------------------------------------------------------
 . `2021/03/23` Introduction and organization (https://www.dropbox.com/sh/bvsow06y93rx8p6/AAD9FyKrKaYuo69ZZW59Su9Da?dl=0[Zoom Recording])
+//-------------------------------------------------------- #1 / 20
 - Organization: {website}/inno-1-Intro.html[HTML]
 - Traceability Project: https://github.com/IU-MAP/MAP-S21-template
-//- {website}/TD1-uk.html[TD1] / {website}/TP1.html[TP1] => assignment 1
-. `2021/03/24` Lectures 
+//--------------------------------------------------------
+. `2021/03/24` Lecture 
+//-------------------------------------------------------- #2-3
 - Agile basics: {website}/inno-2-Agile.html[HTML]
+//--------------------------------------------------------
+. `2021/03/30` Lecture 
+//-------------------------------------------------------- #4
 - Agile Manifesto: {website}/inno-3-Manifesto.html[HTML]
+//--------------------------------------------------------
+. `2021/03/31` Lecture 
+//-------------------------------------------------------- #5
 - GitHub Classroom assignment (make sure you know your group before joining): {classroom}
 
 //--------------------------------------------------------

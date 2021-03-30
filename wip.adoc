@@ -1,0 +1,59 @@
+//---------------------------------
+// Course initial slides
+// (c) JMB - 2021
+//---------------------------------
+= MAP S21 {localdate} 
+:imagesdir: images
+:revealjsdir: reveal.js
+:revealjs_slideNumber: true
+:revealjs_theme: blood
+//beige, black, blood, league, moon, night, serif, simple, sky, solarized, white
+//------------------------------------ variables de configuration
+// only used when master document
+:linkcss!:
+:git-version: 2.24.3
+:icons: font
+:experimental:
+:toc: left
+:numbered:
+:status:
+:siteurl: http://jmbruel.github.io/teachingMaterials/requirements.html
+//:bitlysiteurl: http://bit.ly/jmb-teaching
+:bitlysiteurl: https://bit.ly/innopolis-map
+//------------------------------------ Slides only
+:topic:
+:intro:
+:statement:
+:incremental: %step
+:source:
+:slides:
+// ------------------------------------------ disclaimer
+:numbered!:
+
+// -----------------------------------------------------------
+== Recording?
+
+image::recording-button.jpeg[width=20%]
+
+// -----------------------------------------------------------
+== Today's program
+
+[{incremental}]
+- Manifesto
+- S21 Project
+- Quiz
+
+// -----------------------------------------------------------
+== To follow my slides... icon:mobile[] icon:tablet[] icon:laptop[]
+
+[{statement}]
+{bitlysiteurl}
+
+//--------------------------------------------------------
+== pass:[<i class="fa fa-graduation-cap"></i>] Stay in touch
+
+- pass:[<i class="fa fa-mobile"></i>] pass:[<i class="fa fa-tablet"></i>] pass:[<i class="fa fa-laptop"></i>] {bitlysiteurl}
+- pass:[<i class="fa fa-envelope"></i>] mailto:jbruel@gmail.com[jbruel@gmail.com]
+- pass:[<i class="fa fa-telegram"></i>] https://telegram.me/jmbruel[@jmbruel]
+- pass:[<i class="fa fa-users"></i>] Telegram group: https://t.me/joinchat/s-v3UhXnsOM4MmEy
+- pass:[<i class="fa fa-user"></i>] https://jmbruel.netlify.app
