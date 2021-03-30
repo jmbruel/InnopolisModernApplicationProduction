@@ -87,11 +87,12 @@ NOTE: Dates for S21 session, and subject to modifications
 //--------------------------------------------------------
 . `2021/03/30` Lecture 
 //-------------------------------------------------------- #4
-- Agile Manifesto: {website}/inno-3-Manifesto.html[HTML]
+- Q&A on projects (https://www.dropbox.com/sh/6sz7jkn0znkr28x/AACBQZivbOEwDYq6ooEbnIdVa?dl=0[Zoom Recording])
+- GitHub Classroom assignment (make sure you know your group before joining): {classroom}
 //--------------------------------------------------------
 . `2021/03/31` Lecture 
 //-------------------------------------------------------- #5
-- GitHub Classroom assignment (make sure you know your group before joining): {classroom}
+- Agile Manifesto: {website}/inno-3-Manifesto.html[HTML]
 
 //--------------------------------------------------------
 == pass:[<i class="fa fa-line-chart"></i>] Grading
