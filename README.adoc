@@ -81,7 +81,7 @@ NOTE: Dates for S21 session, and subject to modifications
 - Organization: {website}/inno-1-Intro.html[HTML]
 - Traceability Project: https://github.com/IU-MAP/MAP-S21-template
 //--------------------------------------------------------
-. `2021/03/24` Lecture 
+. `2021/03/24` Lectures (Zoom recording https://www.dropbox.com/sh/bl8vei11vjd5thi/AAD_U90fzHscHUgpR8gmrp2Da?dl=0[1/2] https://www.dropbox.com/sh/90la6atiee92zoe/AAAt2oHRiqwPVMgCBGJH4ELXa?dl=0[2/2]) 
 //-------------------------------------------------------- #2-3
 - Agile basics: {website}/inno-2-Agile.html[HTML]
 //--------------------------------------------------------
