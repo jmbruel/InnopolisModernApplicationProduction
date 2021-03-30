@@ -101,9 +101,9 @@ NOTE: Subject to discussion & evolution
 
 Here is the list of elements for the evaluation:
 
-- Weekly reports (40%): The best of the web-chart grading on the Sprints reports.
-- Final Project Report (30%): A PDF final report on your Agile project (Deadline: End of the Exams week #??).
-- Quiz on concepts and lectures (30%): Timed online quiz (precise date to be confirmed).
+- Weekly reports (40%): The best of the web-chart grading on the Sprints reports (6 sprints).
+- Final Project Report (30%): A PDF final report on your Agile project (Deadline: End of the Exams week #20).
+- Quiz on concepts and lectures (30%): Timed online quiz (*May 24th*).
 - Participation in live lectures (10% bonus): Simple way for me to consider that some are always there while others are not.
 - MOOC success attendance (10% bonus) Follow {bm} MOOC: {agileMoocUrl} (Proof of success >60% will count in the evaluation)
 +
