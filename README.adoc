@@ -85,12 +85,12 @@ NOTE: Dates for S21 session, and subject to modifications
 //-------------------------------------------------------- #2-3
 - Agile basics: {website}/inno-2-Agile.html[HTML]
 //--------------------------------------------------------
-. `2021/03/30` Lecture 
+. `2021/03/30` Lecture (https://www.dropbox.com/sh/6sz7jkn0znkr28x/AACBQZivbOEwDYq6ooEbnIdVa?dl=0[Zoom Recording])
 //-------------------------------------------------------- #4
-- Q&A on projects (https://www.dropbox.com/sh/6sz7jkn0znkr28x/AACBQZivbOEwDYq6ooEbnIdVa?dl=0[Zoom Recording])
+- Q&A on projects 
 - GitHub Classroom assignment (make sure you know your group before joining): {classroom}
 //--------------------------------------------------------
-. `2021/03/31` Lecture 
+. `2021/03/31` Lecture (https://www.dropbox.com/sh/vzjjfkad693qpes/AABZYJ5g7Uru6SPy5bb5Hkcda?dl=0[Zoom Recording])
 //-------------------------------------------------------- #5
 - Agile Manifesto: {website}/inno-3-Manifesto.html[HTML]
 
