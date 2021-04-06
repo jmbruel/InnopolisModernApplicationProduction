@@ -93,6 +93,10 @@ NOTE: Dates for S21 session, and subject to modifications
 . `2021/03/31` Lecture (https://www.dropbox.com/sh/vzjjfkad693qpes/AABZYJ5g7Uru6SPy5bb5Hkcda?dl=0[Zoom Recording])
 //-------------------------------------------------------- #5
 - Agile Manifesto: {website}/inno-3-Manifesto.html[HTML]
+//--------------------------------------------------------
+. `2021/04/06` Lecture (https://www.dropbox.com/sh/ul4n200obggjd7r/AADQy45cbe7-QyD5YVdCiPxza?dl=0[Zoom Recording])
+//-------------------------------------------------------- #5
+- Quality Assessment of Sprints: {website}/sprintQA.html[HTML]
 
 //--------------------------------------------------------
 == pass:[<i class="fa fa-line-chart"></i>] Grading
