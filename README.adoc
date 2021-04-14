@@ -85,6 +85,8 @@ NOTE: Dates for S21 session, and subject to modifications
 //-------------------------------------------------------- #2-3
 - Agile basics: {website}/inno-2-Agile.html[HTML]
 //--------------------------------------------------------
+
+[start=4]
 . `2021/03/30` Lecture (https://www.dropbox.com/sh/6sz7jkn0znkr28x/AACBQZivbOEwDYq6ooEbnIdVa?dl=0[Zoom Recording])
 //-------------------------------------------------------- #4
 - Q&A on projects 
@@ -97,6 +99,20 @@ NOTE: Dates for S21 session, and subject to modifications
 . `2021/04/06` Lecture (https://www.dropbox.com/sh/ul4n200obggjd7r/AADQy45cbe7-QyD5YVdCiPxza?dl=0[Zoom Recording])
 //-------------------------------------------------------- #5
 - Quality Assessment of Sprints: {website}/sprintQA.html[HTML]
+//--------------------------------------------------------
+. `2021/04/07` Lecture
+//-------------------------------------------------------- #5
+- Sprint 0 presentations from students
+
+[start=9]
+//--------------------------------------------------------
+. `2021/04/13` Lecture
+//-------------------------------------------------------- #5
+- Sprint 1 presentations from students
+//--------------------------------------------------------
+. `2021/04/14` Lecture
+//-------------------------------------------------------- #5
+- Sprint 1 presentations from students (continued)
 
 //--------------------------------------------------------
 == pass:[<i class="fa fa-line-chart"></i>] Grading
