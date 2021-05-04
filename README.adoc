@@ -113,6 +113,29 @@ NOTE: Dates for S21 session, and subject to modifications
 . `2021/04/14` Lecture
 //-------------------------------------------------------- #5
 - Sprint 1 presentations from students (continued)
+- Sprint 2 evaluations based on repo
+- Sprint 3 evaluations based on video on moodle
+//-------------------------------------------------------- #5
+. `2021/05/03` Lecture
+//-------------------------------------------------------- #5
+- Q&A on project
+
+[start=13]
+//-------------------------------------------------------- #5
+. `2021/05/04` Lecture (https://www.dropbox.com/sh/20rxdu5jr1luwkp/AABfyb1bd5bjJi83L7vHJPTea?dl=0
+[Zoom Recording])
+//-------------------------------------------------------- #5
+- Continuous Integration with GitHub
+//-------------------------------------------------------- #5
+. `2021/05/06` Lecture
+//-------------------------------------------------------- #5
+- Sprint 4 evaluation
+
+
+[start=16]
+//-------------------------------------------------------- #5
+
+
 
 //--------------------------------------------------------
 == pass:[<i class="fa fa-line-chart"></i>] Grading
