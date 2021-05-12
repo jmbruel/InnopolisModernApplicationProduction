@@ -1,0 +1,87 @@
+//---------------------------------
+// Final report
+// (c) JMB - 2016-2021
+//---------------------------------
+= Final Report Grading
+J.-M. Bruel <jbruel@gmail.com>
+v21.1 {localdate}
+:imagesdir: images
+//------------------------------------ variables de configuration
+// only used when master document
+:icons: font
+:experimental:
+:numbered!:
+:status:
+:base: http://jmbruel.github.io/InnopolisModernApplicationProduction
+:website: {base}
+:baseURL: https://github.com/jmbruel/InnopolisModernApplicationProduction
+:jmbtopic:
+// Specific to GitHub
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+:java: https://www.java.com/fr/[Java]
+:gradle: link:http://www.gradle.org/[Gradle]
+:github: link:https://github.com/[GitHub]
+:maven: link:http://maven.apache.org/[Maven]
+:graphviz: https://graphviz.org/[Graphviz]
+
+endif::[]
+
+ifndef::env-github[]
+include::definitions.txt[]
+endif::[]
+
+== Content
+
+=== Before/after
+
+- Initial/Final status of the software/app/site
+- Initial/Final backlog 
+
+=== Gantt / Schedule / Organization
+
+- How many sprints?
+- Average time spent?
+- Typical (or all if you have them) burdown chart
+
+=== Traceability links
+
+Demonstration of the traceability support: 
+
+line of code -> commit -> branch -> issue -> US -> Requirements
+
+=== Documentation
+
+- Where is the User documentation
+- Where is the technical documentation
+- Assessment of the up-to-date status of these docs (generated or not, etc.)
+
+=== Tests
+
+- Type of tests
+- Number of tests
+- Status of the actual tests
+
+=== Release
+
+- Version (tags)?
+- Where is the reeased artefact (or how to get it locally)
+- What is done in CI?
+
+=== Quality assessment 
+
+- What are the factual arguments in favour of the quality of your software/app/site?
+- Quality tool used (and results)
+
+=== Self-criticism
+
+- What are you proud of?
+- What did you do well?
+- What could have been improved?
+- What would you do differently if you had to start again?
+
+
