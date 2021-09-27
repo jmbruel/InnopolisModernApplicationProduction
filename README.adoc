@@ -4,7 +4,7 @@
 //---------------------------------
 = **M**odern **A**pplication **P**roduction 
 J.-M. Bruel <jbruel@gmail.com>
-v21.1 {localdate}
+v21.2 {localdate}
 :imagesdir: images
 //------------------------------------ variables de configuration
 // only used when master document
@@ -16,6 +16,8 @@ v21.1 {localdate}
 :website: {base}
 :baseURL: https://github.com/jmbruel/InnopolisModernApplicationProduction
 :jmbtopic:
+
+:session: F21
 // Specific to GitHub
 ifdef::env-github[]
 :tip-caption: :bulb:
@@ -39,6 +41,7 @@ endif::[]
 :moodleIUS20: https://moodle.innopolis.university/course/view.php?id=414
 :moodleIUS21: https://moodle.innopolis.university/course/view.php?id=724
 :moodleIUF20: https://moodle.innopolis.university/course/view.php?id=574
+:moodleIUF21: https://moodle.innopolis.university/course/view.php?id=845
 :bitlysiteurl: http://bit.ly/innopolis-map
 :baseMaterial: link:{website}
 :classroom: https://classroom.github.com/g/oQvjEIJQ
@@ -48,7 +51,7 @@ endif::[]
 WARNING: Content subject to regular updates!
 
 Welcome to the teaching materials of my elective course:
-{moodleIUS21}[S21   ] **M**odern **A**pplication **P**roduction.
+{moodleIUS21}[{session}] **M**odern **A**pplication **P**roduction.
 
 In this course, you will learn and practice the main modern techniques to develop software, ranging from coding, testing, modeling, documenting, applying Agile methods, continuous integration, code quality assessment, etc.
 
@@ -73,7 +76,7 @@ Additional useful tools:
 == pass:[<i class="fa fa-calendar"></i>] Schedule and organization
 //--------------------------------------------------------
 
-NOTE: Dates for S21 session, and subject to modifications
+NOTE: Dates for {session} session, and subject to modifications
 
 //--------------------------------------------------------
 . `2021/03/23` Introduction and organization (https://www.dropbox.com/sh/bvsow06y93rx8p6/AAD9FyKrKaYuo69ZZW59Su9Da?dl=0[Zoom Recording])
