@@ -160,5 +160,5 @@ image::mooc-results.png[width=70%]
 - pass:[<i class="fa fa-mobile"></i>] pass:[<i class="fa fa-tablet"></i>] pass:[<i class="fa fa-laptop"></i>] {bitlysiteurl}
 - pass:[<i class="fa fa-envelope"></i>] mailto:jbruel@gmail.com[jbruel@gmail.com]
 - pass:[<i class="fa fa-telegram"></i>] https://telegram.me/jmbruel[@jmbruel]
-- pass:[<i class="fa fa-users"></i>] Telegram group (for fun and quick exchange): https://t.me/joinchat/???
+- pass:[<i class="fa fa-users"></i>] Telegram group (for fun and quick exchange): https://t.me/joinchat/oxv6bxAADjxlZmYy
 - pass:[<i class="fa fa-user"></i>] https://bit.ly/jmbruel
