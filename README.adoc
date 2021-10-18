@@ -73,7 +73,7 @@ You will need a pass:[<i class="fa fa-github"></i>] {github} account.
 NOTE: Dates for {session} session, and subject to modifications
 
 //--------------------------------------------------------
-. `2021/10/18` Introduction and organization (Zoom Recording)
+. `2021/10/18` Introduction and organization (https://www.dropbox.com/sh/md4598z3yvm95l8/AABYhCSqLper37dcCrdzPAMKa?dl=0[Zoom Recording])
 //-------------------------------------------------------- #1 / 20
 - Organization: {website}/inno-1-Intro.html[HTML]
 - Project template: https://github.com/IU-MAP/MAP-S21-template
