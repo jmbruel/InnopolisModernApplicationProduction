@@ -51,7 +51,7 @@ endif::[]
 WARNING: Content subject to regular updates!
 
 Welcome to the teaching materials of my elective course:
-{moodleIUS21}[{session}] **M**odern **A**pplication **P**roduction.
+{moodleIUF21}[{session}] **M**odern **A**pplication **P**roduction.
 
 In this course, you will learn and practice the main modern techniques to develop software, ranging from coding, testing, modeling, documenting, applying Agile methods, continuous integration, code quality assessment, etc.
 
@@ -120,6 +120,8 @@ NOTE: Dates for {session} session, and subject to modifications
 //--------------------------------------------------------
 . `2021/11/24` Lecture
 //-------------------------------------------------------- #14-16
+- Sprint 3 evaluation
+- Q&A on project
 
 
 [start=17]
@@ -131,6 +133,7 @@ NOTE: Dates for {session} session, and subject to modifications
 . `2021/12/01` Lecture ([Zoom Recording])
 //-------------------------------------------------------- #18-20
 - Sprint 4 evaluation
+- Q&A on project final sprint 5
 
 //--------------------------------------------------------
 == pass:[<i class="fa fa-line-chart"></i>] Grading

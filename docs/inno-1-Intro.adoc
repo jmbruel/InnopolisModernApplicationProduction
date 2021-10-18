@@ -4,7 +4,7 @@
 //---------------------------------
 = Modern Application Production
 J.-M. Bruel <jbruel@gmail.com>
-v21.1 {localdate}
+v21.10 {localdate}
 :imagesdir: images
 //------------------------------------ variables de configuration
 // only used when master document
@@ -18,6 +18,7 @@ v21.1 {localdate}
 :bitlysiteurl: http://bit.ly/innopolis-map
 :incremental: %step
 :map-s21-sheet: https://docs.google.com/spreadsheets/d/1Hk0_aHszsyd4Ki_9BvqgKrzRSj00dDEfs8Qt-9HTGxQ/edit?usp=sharing
+:map-f21-sheet: https://docs.google.com/spreadsheets/d/12PSzrHoSjgY1_Ov-ZPbsyjKf94Zh1ViE88fW59hKmBg/edit?usp=sharing
 // we want local served fonts. Therefore patched sky.css
 :revealjs_theme: black
 //:revealjs_customtheme: css/sky.css
@@ -49,13 +50,6 @@ v21.1 {localdate}
 
 include::../definitions.txt[]
 
-== Before we start...
-
-
-[{incremental}]
-- icon:laptop[] Laptops welcome!
-- Discussions welcome... but with me!
-
 == Sorry...
 
 [{incremental}]
@@ -71,7 +65,7 @@ NOTE: I am here thanks to Pr. {bm}
 // 2020 list: https://docs.google.com/spreadsheets/d/1XSAVB8a0ZljweZB5R3J9F3XvB3o6HyXfqA6mLbDwKRY/edit?usp=sharing
 
 
-{map-s21-sheet}
+{map-f21-sheet}
 
 image::whoAreU.jpg[width=70%]
 
@@ -83,7 +77,7 @@ image::S21groupe.png[]
 
 == Looking for...
 
-- Is there any *French speaking* student?
+- Is there any *French-speaking* student?
 
 == Materials in live... icon:mobile[] icon:tablet[] icon:laptop[]
 
@@ -97,11 +91,11 @@ Application::
 Production::
   => Professional activity => *build*
 Methods::
-  Agile Methods, with focus on the {scrum} method
+  Agile Methods, with a focus on the {scrum} method
 Tools::
   We will combine modern production tools
 
-include::time-schedule.adoc[]
+// include::time-schedule.adoc[]
 
 == icon:clipboard[] Evaluation
 
@@ -115,3 +109,42 @@ include::time-schedule.adoc[]
 
 [{incremental}]
 - Moodle vs GitHub
+
+== icon:home[] Projects Topics to choose
+
+Here is the list of topics you can choose for your project:
+
+. Portfolio for developers
+. Publisher/Subscriber system
+. Evaluation aggregator
+. Requirements management system
+. Library management
+. IU Android App
+
+== Portfolio for developers
+
+- https://formalrequirements.github.io/portfolioRequirements/
+- https://wowchemy.com/docs/widget/portfolio/
+
+== Publisher/Subscriber system
+
+Match a set of subject *providers* (Ph.D. topics, Engineering positions, etc.) with interested students (*consumers*)
+
+== Evaluation aggregator
+
+- https://docs.google.com/spreadsheets/d/1V3o2HDMI3jMVmKmo_WxwcQ7-scCv5iu8K4BBxUBmgVo/edit?usp=sharing
+- https://github.com/jmbruel/eval-spider
+
+== Requirements management system
+
+- https://github.com/IU-MAP/MAP-template
+
+== Library management
+
+.Reverse Engineering of an existing app
+image::bal.png[]
+
+== IU Android App
+
+.Join IU research team on Android App dev.
+image::nur.png[]
