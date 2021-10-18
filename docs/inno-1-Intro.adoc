@@ -69,11 +69,11 @@ NOTE: I am here thanks to Pr. {bm}
 
 image::whoAreU.jpg[width=70%]
 
-== The great S21 group
+== The great F21 group
 
-WARNING: Some are missing.
+WARNING: Lots are missing (1st lecture)!
 
-image::S21groupe.png[]
+image::F21group.png[]
 
 == Looking for...
 

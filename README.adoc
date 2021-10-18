@@ -59,14 +59,12 @@ In this course, you will learn and practice the main modern techniques to develo
 == pass:[<i class="fa fa-flask"></i>] Tools
 //--------------------------------------------------------
 
-You will need:
+You will need a pass:[<i class="fa fa-github"></i>] {github} account.
 
-- A pass:[<i class="fa fa-github"></i>] {github} account
+// Please make sure to have the following tools:
 
-Please make sure to have the following tools:
-
-- {java} (version 8 minimum)
-- {maven} (or {gradle} but you'll might have to adapt some build files)
+// - {java} (version 8 minimum)
+// - {maven} (or {gradle} but you'll might have to adapt some build files)
 
 //--------------------------------------------------------
 == pass:[<i class="fa fa-calendar"></i>] Schedule and organization
