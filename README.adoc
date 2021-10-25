@@ -81,7 +81,7 @@ NOTE: Dates for {session} session, and subject to modifications
 . `2021/10/25` Lectures (Zoom Recording) 
 //-------------------------------------------------------- #2
 - Agile basics: {website}/inno-2-Agile.html[HTML]
-- Project sprint evaluation: {website}/sprintQA.html[HTML]
+- Project sprint evaluation: https://jmbruel.github.io/teachingMaterials/sprintQA.html[HTML]
 //--------------------------------------------------------
 . `2021/10/26` Lectures (Zoom Recording) 
 //-------------------------------------------------------- #3
