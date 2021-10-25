@@ -78,14 +78,14 @@ NOTE: Dates for {session} session, and subject to modifications
 - Organization: {website}/inno-1-Intro.html[HTML]
 - Project template: https://github.com/IU-MAP/MAP-S21-template
 //--------------------------------------------------------
-. `2021/10/25` Lectures (Zoom Recording) 
+. `2021/10/25` Lectures (https://www.dropbox.com/s/2wz1x42fo05mglw/zoom_0.mp4?dl=0[Zoom Recording]) 
 //-------------------------------------------------------- #2
 - Agile basics: {website}/inno-2-Agile.html[HTML]
-- Project sprint evaluation: https://jmbruel.github.io/teachingMaterials/sprintQA.html[HTML]
 //--------------------------------------------------------
 . `2021/10/26` Lectures (Zoom Recording) 
 //-------------------------------------------------------- #3
 - Agile basics: {website}/inno-2-Agile.html[HTML] (ctd.)
+- Project sprint evaluation: https://jmbruel.github.io/teachingMaterials/sprintQA.html[HTML]
 //--------------------------------------------------------
 . `2021/10/27` Lectures (Zoom Recording) 
 //-------------------------------------------------------- #4-6
