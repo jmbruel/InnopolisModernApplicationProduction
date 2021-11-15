@@ -101,7 +101,7 @@ NOTE: Dates for {session} session, and subject to modifications
 - Q&A on projects 
 
 [start=10]
-. `2021/11/15` Lecture ([Zoom Recording])
+. `2021/11/15` Lecture (https://www.dropbox.com/s/fc0zom0fl5nywzw/zoom_0.mp4?dl=0[Zoom Recording 1 - Quality] https://www.dropbox.com/s/rqncahsho05ypej/zoom_1.mp4?dl=0[Zoom Recording 2 - Manifesto])
 //-------------------------------------------------------- #10
 - Quality Assessment of Sprints: https://jmbruel.github.io/teachingMaterials/sprintQA.html[HTML]
 - Agile Manifesto: {website}/inno-3-Manifesto.html[HTML]
