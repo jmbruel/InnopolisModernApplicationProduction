@@ -103,7 +103,7 @@ NOTE: Dates for {session} session, and subject to modifications
 [start=10]
 . `2021/11/15` Lecture ([Zoom Recording])
 //-------------------------------------------------------- #10
-- Quality Assessment of Sprints: {website}/sprintQA.html[HTML]
+- Quality Assessment of Sprints: https://jmbruel.github.io/teachingMaterials/sprintQA.html[HTML]
 - Agile Manifesto: {website}/inno-3-Manifesto.html[HTML]
 //--------------------------------------------------------
 . `2021/11/16` Lecture ([Zoom Recording])
