@@ -87,31 +87,33 @@ NOTE: Dates for {session} session, and subject to modifications
 - Agile basics: {website}/inno-2-Agile.html[HTML] (ctd.)
 - Project sprint evaluation: https://jmbruel.github.io/teachingMaterials/sprintQA.html[HTML]
 //--------------------------------------------------------
-. `2021/10/27` Lectures (Zoom Recording) 
+. `2021/10/27` Lectures 
 //-------------------------------------------------------- #4-6
 - Q&A on projects 
 - Project assignment (make sure you know your group before joining)
 //--------------------------------------------------------
 
 [start=7]
-. `2021/11/08` Lecture ([Zoom Recording])
-//-------------------------------------------------------- #7
-- Quality Assessment of Sprints: {website}/sprintQA.html[HTML]
 //--------------------------------------------------------
-. `2021/11/10` Lecture ([Zoom Recording])
-//-------------------------------------------------------- #8-10
-- Sprint 2 presentations from students
+. `2021/11/10` Lecture
+//-------------------------------------------------------- #7-9
+- Sprint 1 presentations from students
+- Q&A on projects 
 
-
-[start=11]
-//--------------------------------------------------------
+[start=10]
 . `2021/11/15` Lecture ([Zoom Recording])
-//-------------------------------------------------------- #11
+//-------------------------------------------------------- #10
+- Quality Assessment of Sprints: {website}/sprintQA.html[HTML]
 - Agile Manifesto: {website}/inno-3-Manifesto.html[HTML]
 //--------------------------------------------------------
-. `2021/11/16` Lecture
-//-------------------------------------------------------- #12
+. `2021/11/16` Lecture ([Zoom Recording])
+//-------------------------------------------------------- #11
 - Testing & CI
+//--------------------------------------------------------
+. `2021/11/22` Lecture
+//-------------------------------------------------------- #12
+- Sprint 2 quick presentations from students
+
 //--------------------------------------------------------
 . `2021/11/23` Lecture
 //-------------------------------------------------------- #13
@@ -121,7 +123,6 @@ NOTE: Dates for {session} session, and subject to modifications
 //-------------------------------------------------------- #14-16
 - Sprint 3 evaluation
 - Q&A on project
-
 
 [start=17]
 //-------------------------------------------------------- 
