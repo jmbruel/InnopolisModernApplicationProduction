@@ -113,7 +113,6 @@ NOTE: Dates for {session} session, and subject to modifications
 . `2021/11/22` Lecture
 //-------------------------------------------------------- #12
 - Sprint 2 quick presentations from students
-
 //--------------------------------------------------------
 . `2021/11/23` Lecture
 //-------------------------------------------------------- #13
