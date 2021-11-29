@@ -106,30 +106,30 @@ NOTE: Dates for {session} session, and subject to modifications
 - Quality Assessment of Sprints: https://jmbruel.github.io/teachingMaterials/sprintQA.html[HTML]
 - Agile Manifesto: {website}/inno-3-Manifesto.html[HTML]
 //--------------------------------------------------------
-. `2021/11/16` Lecture ([Zoom Recording])
+. `2021/11/16` Lecture ([Not recorded])
 //-------------------------------------------------------- #11
 - Testing & CI
 //--------------------------------------------------------
-. `2021/11/22` Lecture
+. `2021/11/22` Lecture ([Not recorded])
 //-------------------------------------------------------- #12
 - Sprint 2 quick presentations from students
 //--------------------------------------------------------
-. `2021/11/23` Lecture
+. `2021/11/23` Lecture ([Not recorded])
 //-------------------------------------------------------- #13
 - Continuous Integration with GitHub
 //--------------------------------------------------------
-. `2021/11/24` Lecture
+. `2021/11/24` Lecture (https://www.dropbox.com/s/l04buisl92h9a51/video1651038663.mp4?dl=0[Zoom Recording about acceptance tests])
 //-------------------------------------------------------- #14-16
 - Sprint 3 evaluation
 - Q&A on project
 
 [start=17]
 //-------------------------------------------------------- 
-. `2021/11/29` Lecture
+. `2021/11/29` Lecture (https://www.dropbox.com/s/rffvw0x7sjsfluu/video1877406390.mp4?dl=0[Zoom Recording])
 //-------------------------------------------------------- #17
-- Q&A on project
+- BDD and GitHub tips
 //--------------------------------------------------------
-. `2021/12/01` Lecture ([Zoom Recording])
+. `2021/12/01` Lecture ([Not recorded])
 //-------------------------------------------------------- #18-20
 - Sprint 4 evaluation
 - Q&A on project final sprint 5
@@ -150,6 +150,11 @@ Here is the list of elements for the evaluation:
 +
 ifndef::slides[.My own results]
 image::mooc-results.png[width=70%]
+
+WARNING: Update from November 29th! The following assignments have been added today, making the overall grading 120% (will be average to 100).
+
+- Teaching material contribution (10%), see: https://moodle.innopolis.university/mod/assign/view.php?id=71182
+- Quiz contribution (10%), see: https://moodle.innopolis.university/mod/assign/view.php?id=71183
 
 :numbered!:
 //--------------------------------------------------------
